@@ -15,9 +15,14 @@ const hero = () => {
               one of the most respected.
             </p>
             <Button text='View Categlog ' />
+            <div className={styles.btnContainer}>
+              carousel buttons will go here
+            </div>
           </div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          
+        </div>
       </div>
     </div>
   );

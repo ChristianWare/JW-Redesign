@@ -3,19 +3,15 @@
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .navLeft, .navRight {
-    flex: 1;
-    height: 100%;
     border: 1.5px solid var(--dark);
 }
 
 .navLeft {
-    border: 1.5px solid var(--dark);
     padding: .5rem;
 }
 
@@ -40,6 +36,6 @@
 }
 
 .navItem {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
 }

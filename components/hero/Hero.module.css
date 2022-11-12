@@ -1,19 +1,31 @@
 .container {
     margin-bottom: 5rem;
-    border: 1.5px solid var(--dark);
+    /* border: 1.5px solid var(--dark); */
     border-top: none;
 }
 
-.content {
-    padding: 3rem;
-}
-
 .top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.topLeft, .topRight {
-    flex:1
+
+.topLeft {
+    border: 1.5px solid var(--dark);
+    border-top: none;
+    padding: 5rem;
+}
+
+.topRight {
+    border: 1.5px solid var(--dark);
+    border-top: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2rem
+}
+
+.topRight {
+    padding: 5rem;
 }
