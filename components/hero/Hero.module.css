@@ -1,0 +1,19 @@
+.container {
+    margin-bottom: 5rem;
+    border: 1.5px solid var(--dark);
+    border-top: none;
+}
+
+.content {
+    padding: 3rem;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topLeft, .topRight {
+    flex:1
+}
