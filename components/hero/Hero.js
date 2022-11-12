@@ -1,3 +1,4 @@
+import Button from "../button/Button";
 import styles from "./Hero.module.css";
 
 const hero = () => {
@@ -13,7 +14,7 @@ const hero = () => {
               Johnnie Walker may be the best-known name in scotch, and it's also
               one of the most respected.
             </p>
-            <button>GO TO CATALOG</button>
+            <Button text='View Categlog ' />
           </div>
         </div>
         <div className={styles.bottom}></div>
