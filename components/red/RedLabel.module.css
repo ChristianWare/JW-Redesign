@@ -1,0 +1,87 @@
+.container {
+    color: var(--color4);
+    background-color: var(--color2);
+    padding: 1rem;
+}
+
+.border {
+    padding: 2rem;
+    width: 100%;
+    border: 15px double var(--color8);
+    border-radius: 5px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+}
+
+.jw {
+    font-family: 'Cormorant Garamond',
+        serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+.rl {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 8rem;
+    letter-spacing: .1rem;
+    color: var(--color8);
+    text-shadow:
+       1px 1px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+
+.bsw {
+    font-family: 'Roboto Condensed',
+        sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color8);
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: black;
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+    margin-top: -3rem;
+}
+
+.lowerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    position: relative;
+    width: 50px;
+    margin-top: 2rem;
+}
+
+.scriptText {
+    font-family: 'birds';
+    font-size: 3rem;
+    color: var(--color8);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.walker {
+    width: 50px;
+}

@@ -3,6 +3,8 @@ import Button from "../button/Button";
 import styles from "./Hero.module.css";
 import JW from '../../public/icons/jw.png'
 import Image from "next/image";
+import Redlabel from "../red/Redlabel";
+import GreenLabel from "../green/GreenLabel";
 
 const hero = () => {
   return (
@@ -26,6 +28,8 @@ const hero = () => {
         {/* <Image src={JW} /> */}
         <div className={styles.bottom}>
           <BlueLabel />
+          <Redlabel />
+          <GreenLabel />
         </div>
       </div>
     </div>

@@ -1,0 +1,91 @@
+.container {
+    color: var(--color8);
+    border-radius: 5px;
+    background-color: var(--color5);
+    padding: 1rem;
+}
+
+.border {
+    padding: 1rem;
+    width: 100%;
+    border: 15px double var(--color52);
+    border-radius: 5px;
+}
+
+.textContainer {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr1{
+    width: 50%;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color8);
+    border: none;
+}
+
+.hr2{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    background-color: var(--color3);
+    border: none;
+}
+
+.textContainer h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    margin-top: 2rem;
+    background-color: transparent;
+}
+
+.textContainer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 5px 4px var(--color52);
+    font-weight: 100;
+    font-size: 7rem;
+    letter-spacing: .1rem;
+    color: var(--color4);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.lowerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer{
+    position: relative;
+    width: 50px;
+    margin-top: 2rem;
+}
+
+.scriptText {
+    font-family: 'birds';
+    font-size: 3rem;
+    color: var(--color8);
+    text-align: center;
+    width: 100%;
+}
+
+.textContainer p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    word-spacing: .3rem;
+}
+
+.walker {
+    width: 50px;
+    margin-top: 2rem;
+}
