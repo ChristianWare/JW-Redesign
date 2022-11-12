@@ -1,0 +1,41 @@
+.container {
+    margin-top: .5rem;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLeft, .navRight {
+    flex: 1;
+    height: 100%;
+    border: 1.5px solid var(--dark);
+}
+
+.navLeft {
+    border: 1.5px solid var(--dark);
+    padding: .5rem;
+}
+
+.navRight {
+    padding: .5rem;
+    border-left: none;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+}
