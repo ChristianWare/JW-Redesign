@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../button/Button";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
@@ -6,7 +7,7 @@ const Nav = () => {
     <header className={styles.container}>
       <nav className={styles.navbar}>
         <div className={styles.navLeft}>
-          <p className={styles.logo}>JW</p>
+          <Button text='JW' href='/' />
         </div>
         <div className={styles.navRight}>
           <ul className={styles.navmenu}>
@@ -17,7 +18,7 @@ const Nav = () => {
             </li>
             <li className={styles.navItem}>
               <Link href='/contact' passHref legacyBehavior>
-                <a title='Contact Page'>Name</a>
+                <a title='Contact Page'>Login</a>
               </Link>
             </li>
           </ul>

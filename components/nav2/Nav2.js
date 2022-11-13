@@ -13,7 +13,7 @@ const Nav2 = () => {
         <Button text='black' href='/black' />
         <Button text='gold' href='/gold' />
         <Button text='kink george' href='/kinggeorge' />
-        <Button text='BICENTENARY' href='/bicentenary' />
+        <Button text='Jane Walker' href='/janewalker' />
         <Button text='specialties' href='/specialties' />
       </div>
     </nav>

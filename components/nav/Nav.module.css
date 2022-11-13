@@ -8,18 +8,13 @@
     gap: 1rem;
 }
 
-.navLeft, .navRight {
-    border: 1.5px solid var(--dark);
-}
-
 .navLeft {
-    padding: .5rem;
+    display: flex;
 }
 
 .navRight {
-    padding: .5rem;
-    /* border-left: none; */
-    padding-right: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .logo {
