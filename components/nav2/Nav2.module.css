@@ -1,7 +1,13 @@
+.navbar {
+    margin-top: 3rem;
+   
+}
+
 .navmenu {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     list-style: none;
     text-decoration: none;
     padding-left: 0;
@@ -10,7 +16,7 @@
 .navItem {
     width: 100%;
     border: 1.5px solid var(--dark);
-    border-left: none;
+    /* border-left: none; */
     padding: 1rem;
     text-transform: uppercase;
     text-align: center;
@@ -18,10 +24,6 @@
     color: var(--dark);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-}
-
-.navItem:nth-child(1) {
-    border-left: 1.5px solid var(--dark);
 }
 
 .navItem:hover {
@@ -44,15 +46,8 @@
 
 @media screen and (max-width: 568px) {
     .navmenu {
+        display: flex;
         flex-direction: column;
     }
-
-    .navItem {
-        border-left: 1.5px solid var(--dark);
-        border-bottom: none;
-    }
-
-    .navItem:last-child {
-        border-bottom: 1px solid var(--dark);
-    }
+    
 }

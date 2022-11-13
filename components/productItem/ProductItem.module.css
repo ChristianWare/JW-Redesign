@@ -1,13 +1,10 @@
+.container {
+    border: 1.5px solid var(--dark);
+}
 
-
-
-
-
-
-
-
-
-
+.content {
+    padding: 1rem;
+}
 
 
 .priceAddContainer {

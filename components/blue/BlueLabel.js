@@ -33,7 +33,7 @@ const BlueLabel = () => {
             were matured to create Blue Label, a whisky that embodies the
             traditional Johnnie Walker character but is infused with smokiness.
           </p>
-          <Button text='Buy Blue Label' btnType='blue' iconColor='whiteIcon' />
+          <Button text='Shop Blue Label' btnType='blue' iconColor='whiteIcon' />
         </div>
       </div>
     </div>

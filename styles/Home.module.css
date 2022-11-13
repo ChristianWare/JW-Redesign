@@ -1,0 +1,15 @@
+
+
+.itemsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* padding: 3rem; */
+    /* margin-top: 5rem; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; */
+    /* flex-wrap: wrap; */
+    margin-bottom: 5rem;
+}

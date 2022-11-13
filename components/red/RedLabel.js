@@ -31,7 +31,7 @@ const Redlabel = () => {
             sophisticated, and smoky flavors. In any case, this unique end could
             be considered as a signature of Johnnie Walker whiskies.
           </p>
-          <Button text='Buy Red Label' btnType='red' iconColor='whiteIcon' />
+          <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' />
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ const GreenLabel = () => {
             their smells and tastes.
           </p>
           <Button
-            text='Buy Green Label'
+            text='Shop Green Label'
             btnType='green'
             iconColor='whiteIcon'
           />

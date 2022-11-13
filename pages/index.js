@@ -1,13 +1,32 @@
-import db from '../utils/db';
-import { Store } from '../utils/Store';
-import axios from 'axios'
+import db from "../utils/db";
+import { Store } from "../utils/Store";
+import axios from "axios";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import Hero from "../components/hero/Hero";
 import Head from "next/head";
-import PopProducts from "../components/popProducts/PopProducts";
+import Product from "../models/Product";
+import Nav2 from "../components/nav2/Nav2";
+import ProductItem from "../components/productItem/ProductItem";
+import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ products }) {
+  const { state, dispatch } = useContext(Store);
+  const { cart } = state;
+
+  const addToCartHandler = async (product) => {
+    const existItem = cart.cartItems.find((x) => x.slug === product.slug);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+
+    if (data.countInStock < quantity) {
+      return toast.error("Sorry. Product is out of stock");
+    }
+
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+    toast.success("Product has been added to cart");
+  };
+
   return (
     <>
       <Head>
@@ -16,13 +35,28 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Hero />
-      <PopProducts />
+      <Nav2 />
+      <h2 className={styles.title}>POPULAR PRODUCTS</h2>
+      <div className={styles.itemsGrid}>
+        {products.map((product) => (
+          <ProductItem
+            key={product.slug}
+            product={product}
+            addToCartHandler={addToCartHandler}
+          />
+        ))}
+      </div>
     </>
   );
 }
 
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find().lean();
 
-// export async function getServerSideProps() {
-//   await db.connect();
-//   const products = await Product.find()
-// }
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
+}

@@ -7,10 +7,16 @@ const ProductItem = ({ product, addToCartHandler }) => {
     <>
       <div className={styles.container}>
         <div className={styles.content}>
-          <p className={styles.title}>title</p>
-          <div className={styles.imgContainer}>
-            <Image src={product.image} alt={product.name} />
-          </div>
+          <p>{product.name}</p>
+          <p>{product.size}</p>
+          <Image
+            src={product.image}
+            alt={product.name}
+            // objectFit='cover'
+            layout="responsive"
+            width='200'
+            height='200'
+          />
           <div className={styles.priceAddContainer}>
             <p>{product.label}</p>
             <p>{product.price}</p>
