@@ -8,12 +8,14 @@
     gap: 1rem;
 }
 
-
 .topLeft {
     border: 1.5px solid var(--dark);
-    /* border-top: none; */
     padding: 5rem;
     margin-top: 1rem;
+}
+
+.topLeft h1 {
+    text-transform: uppercase;
 }
 
 .topRight {
@@ -48,8 +50,11 @@
     }
 
     .topRight {
-        border-left: 1.5px solid var(--dark);
         margin-top: 0rem;
+    }
+
+    .topRight {
+        border-left: 1.5px solid var(--dark);
     }
 }
 

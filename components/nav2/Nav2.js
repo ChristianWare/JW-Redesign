@@ -12,8 +12,8 @@ const Nav2 = () => {
         <Button text='green' href='/green' />
         <Button text='black' href='/black' />
         <Button text='gold' href='/gold' />
-        <Button text='kink george' href='/kinggeorge' />
-        <Button text='Jane Walker' href='/janewalker' />
+        <Button text='king george' href='/kingGeorge' />
+        <Button text='Jane Walker' href='/janeWalker' />
         <Button text='specialties' href='/specialties' />
       </div>
     </nav>
