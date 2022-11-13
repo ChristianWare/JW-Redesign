@@ -1,7 +1,10 @@
+import db from '../utils/db';
+import { Store } from '../utils/Store';
+import axios from 'axios'
+import { toast } from "react-toastify";
+import { useContext } from "react";
 import Hero from "../components/hero/Hero";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import PopProducts from "../components/popProducts/PopProducts";
 
 export default function Home() {
@@ -17,3 +20,9 @@ export default function Home() {
     </>
   );
 }
+
+
+// export async function getServerSideProps() {
+//   await db.connect();
+//   const products = await Product.find()
+// }

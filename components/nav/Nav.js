@@ -11,12 +11,12 @@ const Nav = () => {
         <div className={styles.navRight}>
           <ul className={styles.navmenu}>
             <li className={styles.navItem}>
-              <Link href='/contact' passHref>
+              <Link href='/contact' passHref legacyBehavior>
                 <a title='Contact Page'>Cart</a>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href='/contact' passHref>
+              <Link href='/contact' passHref legacyBehavior>
                 <a title='Contact Page'>Name</a>
               </Link>
             </li>

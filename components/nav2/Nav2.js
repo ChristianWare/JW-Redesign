@@ -8,27 +8,27 @@ const Nav2 = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navmenu}>
         <li className={styles.navItem}>
-          <Link href='/blue' passHref>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Blue</a>
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href='/blue' passHref>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Green</a>
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href='/blue' passHref>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Black</a>
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href='/blue' passHref>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Gold</a>
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href='/blue' passHref>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Specialties</a>
           </Link>
         </li>

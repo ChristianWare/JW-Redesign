@@ -1,0 +1,5 @@
+.sectionTitle {
+    border: 1.5px solid var(--dark);
+    border-top: none;
+    padding: 3rem;
+}

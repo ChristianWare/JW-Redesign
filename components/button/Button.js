@@ -4,7 +4,7 @@ import Arrow from "../../public/icons/diag.svg";
 
 function Button({ text, href = "", btnType = "primary", iconColor = "darkIcon" }) {
   return (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       <a className={styles.container}>
         <button className={styles[btnType]}>
           {text} <Arrow className={styles[iconColor]} />
