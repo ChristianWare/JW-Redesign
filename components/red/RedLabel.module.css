@@ -9,6 +9,8 @@
     width: 100%;
     border: 15px double var(--color8);
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .textContainer {
@@ -82,4 +84,11 @@
 
 .walker {
     width: 50px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
 }
