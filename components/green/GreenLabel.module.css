@@ -9,6 +9,9 @@
     width: 100%;
     border: 15px double var(--color52);
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .textContainer {
@@ -87,4 +90,28 @@
 .walker {
     width: 50px;
     margin-top: 2rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+@media screen and (max-width: 968px) {
+    .border {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .right {
+        padding: 2rem
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right {
+        padding: 1rem
+    }
 }

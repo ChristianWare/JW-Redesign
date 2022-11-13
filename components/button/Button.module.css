@@ -115,3 +115,10 @@
 .secondary:hover .icon {
     transform: rotate(0deg);
 }
+
+
+@media screen and (max-width: 568px) {
+    .primary, .secondary, .red, .blue, .green {
+        width: 100%;
+    }
+}

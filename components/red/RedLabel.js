@@ -22,17 +22,16 @@ const Redlabel = () => {
         </div>
         <div className={styles.right}>
           <p>
-            Flowers that bloom into flames. Johnnie Walker Red Label is the
-            world’s best-selling Scotch Whisky. And is made for mixing, both in
-            exhilarating cocktails and with your favorite people. It brings
-            together whiskies specially chosen for their bold, vibrant flavors
-            that add a fiery kick to any mix.
+            This nonage whiskey is a combination of 40 different powerful and
+            spicy single malt and grain whiskies. It has a fruity nose with
+            hints of pear, apple, and vanilla with some lively species. The
+            sweet freshness remains on the tongue, but the most pronounced malt
+            aromas are pepper, vanilla, cinnamon, and ginger. Some might find
+            the herbal finish harsh, while others appreciate its long,
+            sophisticated, and smoky flavors. In any case, this unique end could
+            be considered as a signature of Johnnie Walker whiskies.
           </p>
-          <Button
-            text='Buy Red Label'
-            btnType='red'
-            iconColor='whiteIcon'
-          />
+          <Button text='Buy Red Label' btnType='red' iconColor='whiteIcon' />
         </div>
       </div>
     </div>
