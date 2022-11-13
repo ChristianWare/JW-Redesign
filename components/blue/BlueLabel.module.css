@@ -9,7 +9,6 @@
     padding: 2rem;
     width: 100%;
     border: 7px double var(--color8);
-    /* border-radius: 5px; */
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -39,7 +38,6 @@
     letter-spacing: .1rem;
     position: relative;
     top: -15px;
-    /* white-space: nowrap; */
 }
 
 .jwblText h3 {
