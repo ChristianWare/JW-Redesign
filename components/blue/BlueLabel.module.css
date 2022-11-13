@@ -8,8 +8,8 @@
 .border {
     padding: 2rem;
     width: 100%;
-    border: 15px double var(--color8);
-    border-radius: 5px;
+    border: 7px double var(--color8);
+    /* border-radius: 5px; */
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
