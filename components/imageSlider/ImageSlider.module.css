@@ -5,6 +5,7 @@
     border: 1.5px solid var(--dark);
     border-top: none;
     user-select: none;
+    padding: 1rem;
 }
 
 .chevron {
@@ -13,10 +14,16 @@
     cursor: pointer;
 }
 
+.dots {
+    position: relative;
+    top: -2px;
+}
+
 .filled {
     font-size: 4rem;
     line-height: 0;
-    cursor: pointer
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .hollow {
@@ -25,4 +32,21 @@
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: var(--dark);
     cursor: pointer;
+    line-height: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hollow:hover {
+    color: var(--dark);
+    transition: all 0.3s ease-in-out;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
 }
