@@ -22,7 +22,6 @@ const hero = () => {
           </div>
         </div>
         <div className={styles.bottom}>
-          {/* <h4 className={styles.featured}>Featured Labels</h4> */}
           <ImageSlider slides={SlideData} />
         </div>
       </div>

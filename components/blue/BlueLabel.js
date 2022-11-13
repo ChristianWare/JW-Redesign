@@ -38,6 +38,7 @@ const BlueLabel = () => {
               text='Shop Blue Label'
               btnType='blue'
               iconColor='whiteIcon'
+              href="/blue"
             />
           </div>
         </div>

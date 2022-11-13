@@ -7,10 +7,13 @@ import Hero from "../components/hero/Hero";
 import Head from "next/head";
 import Product from "../models/Product";
 import Nav2 from "../components/nav2/Nav2";
+import Types from "../components/types/Types";
 import ProductItem from "../components/productItem/ProductItem";
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
+import Button from "../components/button/Button";
 
-export default function Home({ products }) {
+export default function Home({ products, blue }) {
+  console.log(blue)
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -46,6 +49,12 @@ export default function Home({ products }) {
           />
         ))}
       </div>
+      <div className={styles.btnContainer}>
+        <Button text='See All' />
+      </div>
+      <Types />
+
+      {/* // add specialties and collection sections here // */}
     </>
   );
 }
@@ -53,10 +62,12 @@ export default function Home({ products }) {
 export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find().lean();
+  const blue = await Product.find({ label: "blue" }).lean();
 
   return {
     props: {
       products: products.map(db.convertDocToObj),
+      blue: blue.map(db.convertDocToObj),
     },
   };
 }

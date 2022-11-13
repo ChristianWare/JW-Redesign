@@ -5,24 +5,27 @@
 .top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 
 .topLeft {
     border: 1.5px solid var(--dark);
-    border-top: none;
+    /* border-top: none; */
     padding: 5rem;
+    margin-top: 1rem;
 }
 
 .topRight {
     border: 1.5px solid var(--dark);
-    border-top: none;
-    border-left: none;
+    /* border-top: none; */
+    /* border-left: none; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 2rem;
     padding: 5rem;
+    margin-top: 1rem;
 }
 
 .btnContainer {
