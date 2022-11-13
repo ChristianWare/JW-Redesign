@@ -2,7 +2,6 @@ import Button from "../button/Button";
 import styles from "./Hero.module.css";
 import ImageSlider from "../imageSlider/ImageSlider";
 import { SlideData } from "../SlideData";
-import Redlabel from "../red/Redlabel";
 
 const hero = () => {
   return (
@@ -22,9 +21,6 @@ const hero = () => {
         </div>
         <div className={styles.bottom}>
           <ImageSlider slides={SlideData} />
-          {/* <Button text='hello' btnType='red' iconColor='whiteIcon' />
-          <Button text='hello' btnType='blue' iconColor='whiteIcon' />
-          <Button text='hello' btnType='green' iconColor='whiteIcon' /> */}
         </div>
       </div>
     </div>

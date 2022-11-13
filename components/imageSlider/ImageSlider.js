@@ -30,7 +30,11 @@ const ImageSlider = ({ slides }) => {
         <Left onClick={prevSlide} className={styles.chevron} />
         {SlideData.map((slide, slideIndex) => {
           return (
-            <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className={styles.dots}>
+            <div
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className={styles.dots}
+            >
               {current === slideIndex ? (
                 <div className={styles.filled}>•</div>
               ) : (
