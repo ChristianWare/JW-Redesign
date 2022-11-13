@@ -21,20 +21,38 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 2rem
+    gap: 2rem;
+    padding: 5rem;
 }
 
 .btnContainer {
     display: flex;
 }
 
-.topRight {
-    padding: 5rem;
-}
-
 .featured {
     text-transform: uppercase;
     color: var(--dark);
-    text-align: center;
-    
+    text-align: center;   
+}
+
+@media screen and (max-width: 968px) {
+    .topLeft, .topRight {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .top {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .topRight {
+        border-left: 1.5px solid var(--dark);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btnContainer {
+        display: block;
+    }
 }
