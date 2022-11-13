@@ -31,11 +31,13 @@ const GreenLabel = () => {
             create a refreshing flavor without sacrificing the intensity of
             their smells and tastes.
           </p>
-          <Button
-            text='Shop Green Label'
-            btnType='green'
-            iconColor='whiteIcon'
-          />
+          <div className={styles.btnContainer}>
+            <Button
+              text='Shop Green Label'
+              btnType='green'
+              iconColor='whiteIcon'
+            />
+          </div>
         </div>
       </div>
     </div>

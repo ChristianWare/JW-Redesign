@@ -24,6 +24,17 @@
     gap: 2rem
 }
 
+.btnContainer {
+    display: flex;
+}
+
 .topRight {
     padding: 5rem;
+}
+
+.featured {
+    text-transform: uppercase;
+    color: var(--dark);
+    text-align: center;
+    
 }

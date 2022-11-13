@@ -16,10 +16,13 @@ const hero = () => {
               Johnnie Walker may be the best-known name in scotch, and it's also
               one of the most respected.
             </p>
-            <Button text='View Categlog ' />
+            <div className={styles.btnContainer}>
+              <Button text='View Categlog ' />
+            </div>
           </div>
         </div>
         <div className={styles.bottom}>
+          {/* <h4 className={styles.featured}>Featured Labels</h4> */}
           <ImageSlider slides={SlideData} />
         </div>
       </div>

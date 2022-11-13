@@ -13,6 +13,11 @@ const Nav2 = () => {
         </li>
         <li className={styles.navItem}>
           <Link href='/blue' passHref legacyBehavior>
+            <a>Red</a>
+          </Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link href='/blue' passHref legacyBehavior>
             <a>Green</a>
           </Link>
         </li>
@@ -24,11 +29,6 @@ const Nav2 = () => {
         <li className={styles.navItem}>
           <Link href='/blue' passHref legacyBehavior>
             <a>Gold</a>
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link href='/blue' passHref legacyBehavior>
-            <a>Specialties</a>
           </Link>
         </li>
         <li className={styles.navItem}>

@@ -1,6 +1,6 @@
 import styles from "./ProductItem.module.css";
-import Link from "next/link";
 import Image from "next/image";
+import Button from "../button/Button";
 
 const ProductItem = ({ product, addToCartHandler }) => {
   return (
@@ -13,15 +13,16 @@ const ProductItem = ({ product, addToCartHandler }) => {
             src={product.image}
             alt={product.name}
             // objectFit='cover'
-            layout="responsive"
+            layout='responsive'
             width='200'
             height='200'
           />
-          <div className={styles.priceAddContainer}>
-            <p>{product.label}</p>
-            <p>{product.price}</p>
-            <p>+</p>
-          </div>
+            <p>Label: {product.label.toUpperCase()}</p>
+            <p>${product.price}</p>
+            <div className={styles.btnContainer}>
+              <Button text='Add to Cart' />
+              <Button text='MOre Details' />
+            </div>
         </div>
       </div>
     </>

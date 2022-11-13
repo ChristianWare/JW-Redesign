@@ -94,6 +94,10 @@
     padding: 3rem;
 }
 
+.btnContainer {
+    display: flex;
+}
+
 @media screen and (max-width: 968px) {
     .border {
         grid-template-columns: repeat(1, 1fr);

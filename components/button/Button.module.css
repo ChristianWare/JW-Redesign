@@ -19,6 +19,7 @@
     color: var(--dark);
     transition: all 0.3s ease-in-out;
     user-select: none;
+    width: 100%;
 }
 
 .primary {
@@ -65,7 +66,7 @@
 }
 
 .primary:hover  {
-    background-color: var(--dark);
+    background-color: var(--orange);
     color: var(--light);
 }
 

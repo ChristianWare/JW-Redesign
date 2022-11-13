@@ -6,9 +6,9 @@
     padding: 1rem;
 }
 
-
-.priceAddContainer {
+.btnContainer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
 }

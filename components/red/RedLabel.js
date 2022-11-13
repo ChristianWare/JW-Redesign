@@ -1,7 +1,7 @@
-import styles from './RedLabel.module.css'
+import styles from "./RedLabel.module.css";
 import Image from "next/image";
 import JW from "../../public/icons/jw.png";
-import Button from '../button/Button';
+import Button from "../button/Button";
 
 const Redlabel = () => {
   return (
@@ -31,10 +31,12 @@ const Redlabel = () => {
             sophisticated, and smoky flavors. In any case, this unique end could
             be considered as a signature of Johnnie Walker whiskies.
           </p>
-          <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' />
+          <div className={styles.btnContainer}>
+            <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' />
+          </div>
         </div>
       </div>
     </div>
   );
-}
-export default Redlabel
+};
+export default Redlabel;
