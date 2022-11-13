@@ -1,10 +1,7 @@
-import BlueLabel from "../blue/BlueLabel";
 import Button from "../button/Button";
 import styles from "./Hero.module.css";
-import JW from '../../public/icons/jw.png'
-import Image from "next/image";
-import Redlabel from "../red/Redlabel";
-import GreenLabel from "../green/GreenLabel";
+import ImageSlider from "../imageSlider/ImageSlider";
+import { SlideData } from "../SlideData";
 
 const hero = () => {
   return (
@@ -20,16 +17,10 @@ const hero = () => {
               one of the most respected.
             </p>
             <Button text='View Categlog ' />
-            <div className={styles.btnContainer}>
-              carousel buttons will go here
-            </div>
           </div>
         </div>
-        {/* <Image src={JW} /> */}
         <div className={styles.bottom}>
-          <BlueLabel />
-          <Redlabel />
-          <GreenLabel />
+          <ImageSlider slides={SlideData} />
         </div>
       </div>
     </div>

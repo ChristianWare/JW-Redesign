@@ -1,6 +1,5 @@
 .container {
     color: var(--color8);
-    border-radius: 5px;
     background-color: var(--color5);
     padding: 1rem;
 }
