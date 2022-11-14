@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 
-const shipping = () => {
+export default function shipping() {
   const {
     handleSubmit,
     register,
@@ -124,5 +124,4 @@ const shipping = () => {
       </form>
     </>
   );
-};
-export default shipping;
+}

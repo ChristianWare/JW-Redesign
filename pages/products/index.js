@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { Store } from "../../utils/Store";
 
 
-const productsPage = ({ products }) => {
+export default function productspage ({ products }) {
     const { state, dispatch } = useContext(Store);
     const { cart } = state;
 
@@ -46,7 +46,6 @@ const productsPage = ({ products }) => {
     </>
   );
 };
-export default productsPage;
 
 export async function getServerSideProps() {
   await db.connect();
