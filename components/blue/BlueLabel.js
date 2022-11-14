@@ -11,11 +11,10 @@ const BlueLabel = () => {
           <div className={styles.jwblText}>
             <h4>JOHNNIE WALKER</h4>
             <h2>Blue Label</h2>
-            <h3>BLENDED SCOTCH WHISKEY</h3>
-            <hr className={styles.divider} />
+            {/* <hr className={styles.divider} /> */}
           </div>
           <div className={styles.lowerTop}>
-            <h3 className={styles.smallText}>A BLEND OF OUR RAREST WHISKEYS</h3>
+            {/* <h3 className={styles.smallText}>A BLEND OF OUR RAREST WHISKEYS</h3> */}
             <div className={styles.imgContainer}>
               <Image src={JW} width='50' height='83' alt='image' />
             </div>

@@ -17,9 +17,7 @@ const GreenLabel = () => {
               <Image src={JW} width='50' height='83' alt='image' />
             </div>
             <h3 className={styles.scriptText}>Blended Malt Scotch Whiskey</h3>
-            <p>DISTILLED BLENDED AND BOTTLED IN SCOTTLAND</p>
           </div>
-          {/* <div className={styles.lowerTop}></div> */}
         </div>
         <div className={styles.right}>
           <div className={styles.btnContainer}>

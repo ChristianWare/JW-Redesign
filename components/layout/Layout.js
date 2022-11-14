@@ -49,8 +49,13 @@ const Layout = ({ children }) => {
               <li className={styles.navItem}>
                 <Link href='/cart' passHref legacyBehavior>
                   <a title='Contact Page'>
-                    Cart:
-                    {cartItemsCount > 0 && <span className={styles.cartCount}>{" "}({cartItemsCount})</span>}
+                    {cartItemsCount > 0 ? (
+                      <span className={styles.cartCount}>
+                        Cart:({cartItemsCount})
+                      </span>
+                    ) : (
+                      <span className={styles.cartCount}>Cart</span>
+                    )}
                   </a>
                 </Link>
               </li>

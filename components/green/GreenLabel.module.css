@@ -78,12 +78,6 @@
     width: 100%;
 }
 
-.textContainer p {
-    font-size: 1.4rem;
-    font-weight: 600;
-    word-spacing: .3rem;
-}
-
 .walker {
     width: 50px;
     margin-top: 2rem;
@@ -93,7 +87,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 968px) {

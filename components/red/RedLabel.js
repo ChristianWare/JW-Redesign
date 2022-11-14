@@ -11,7 +11,7 @@ const Redlabel = () => {
           <div className={styles.textContainer}>
             <p className={styles.jw}>JOHNNIE WALKER</p>
             <p className={styles.rl}>RED LABEL</p>
-            <p className={styles.bsw}>BLENDED SCOTCH WHISKEY</p>
+            {/* <p className={styles.bsw}>BLENDED SCOTCH WHISKEY</p> */}
           </div>
           <div className={styles.lowerTop}>
             <div className={styles.imgContainer}>
