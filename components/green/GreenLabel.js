@@ -27,6 +27,7 @@ const GreenLabel = () => {
               text='Shop Green Label'
               btnType='green'
               iconColor='whiteIcon'
+              href='/green'
             />
           </div>
         </div>

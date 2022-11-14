@@ -22,7 +22,7 @@ const Redlabel = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.btnContainer}>
-            <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' />
+            <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' href='/red' />
           </div>
         </div>
       </div>
