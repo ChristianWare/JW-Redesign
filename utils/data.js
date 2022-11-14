@@ -148,32 +148,6 @@ const data = {
       taste: "Rich, Smoke, Oak, Vanilla, Balanced",
     },
     {
-      name: "JW Swing",
-      slug: "johnnie-walker-swing",
-      label: "specialty",
-      image: "/images/jwswing.webp",
-      price: 66.99,
-      abv: 40,
-      size: "750 ML",
-      countInStock: 20,
-      description:
-        "Originally designed to counteract unruly ocean waves while aboard the great luxury steamships. Today, the distinctive bottle contains a blend of Speyside, Highlands and Islay malts for richness, spice and weight, with a touch of sweetness on the elegant finish.",
-      taste: "Rich, Spice, Sweet, Balanced",
-    },
-    {
-      name: "JW Red Label",
-      slug: "johnnie-walker-red-label-2",
-      label: "red",
-      image: "/images/red2.webp",
-      price: 9.97,
-      abv: 40,
-      size: "50 ML",
-      countInStock: 20,
-      description:
-        "One of the world's best selling Scotch whiskies. Fresh and robust, this powerful combination of spicy, smoky malts and lingering, lighter grains is perfect for mixing. A distinctive strength of character and a fullness of flavor provides international appeal.",
-      taste: "Light, Spice, Smoke, Oak, Balanced",
-    },
-    {
       name: "JW Double Black",
       slug: "johnnie-walker-double-black",
       label: "black",
@@ -251,45 +225,7 @@ const data = {
         "Game of Thrones & Johnnie Walker have teamed up to release White Walker By Johnnie Walker. This latest release comes complete with cold-reactive packaging that causes new artwork to appear on the bottle if it is chilled in the freezer as well as the show's most famous quote, Winter is here, along the side. Prepare for the return of Game Of Thrones with a bottle of Johnnie Walker's White Walker!",
       taste: "Light, Spice, Smoke, Oak, Balanced",
     },
-    {
-      name: "200th Anniversary",
-      slug: "johnnie-walker-blue-label 200th-anniversary-edition",
-      label: "specialty",
-      image: "/images/blue200.jpg",
-      price: 5499.99,
-      abv: 45,
-      size: "50 ML",
-      countInStock: 20,
-      description:
-        "Johnnie Walker Blue Label 200th Anniversary Edition celebrates John and Alexander Walker’s pioneering spirit and groundbreaking style. This special limited edition has been created to commemorate the anniversary of John Walker’s birthday, on 25th July 1805. As a cask strength blend of Blue Label, the full power of the flavours can be experienced. This exclusive Johnnie Walker Blue Label is bottled in a special anniversary crystal decanter that has been specially created for Johnnie Walker by Baccarat.",
-      taste: "Rich, Smoke, Oak, Vanilla, Balanced",
-    },
-    {
-      name: "Bicentenary Blend",
-      slug: "john-walker-and-sons-bicentenary-blend",
-      label: "specialty",
-      image: "/images/bic.webp",
-      price: 1499.99,
-      abv: 45,
-      size: "50 ML",
-      countInStock: 20,
-      description:
-        "Master Blender Jim Beveridge and his small team of expert whisky makers have drawn inspiration from the thrilling flavors listed on an original inventory from John Walker’s store. Using this as a window into the world where John started, they have meticulously crafted a complex whisky with rich layers that re-imagines the kaleidoscope of exotic flavors that shaped our founder’s imagination.",
-      taste: "A sweet spice lingers as the door closes behibd you.",
-    },
-    {
-      name: "Jane Walker",
-      slug: "johnnie-walker-black-label-the-jane-walker-edition",
-      label: "specialty",
-      image: "/images/jane.webp",
-      price: 1499.99,
-      abv: 45,
-      size: "50 ML",
-      countInStock: 20,
-      description:
-        "Master Blender Jim Beveridge and his small team of expert whisky makers have drawn inspiration from the thrilling flavors listed on an original inventory from John Walker’s store. Using this as a window into the world where John started, they have meticulously crafted a complex whisky with rich layers that re-imagines the kaleidoscope of exotic flavors that shaped our founder’s imagination.",
-      taste: "A sweet spice lingers as the door closes behibd you.",
-    },
+    
   ],
 };
 

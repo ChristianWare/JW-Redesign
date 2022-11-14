@@ -2,7 +2,6 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
-import Layout from "../../components/Layout";
 import { getError } from "../../utils/error";
 import { useRouter } from "next/router";
 
@@ -99,7 +98,7 @@ export default function AdminProductsScreen() {
 
 return (
   <>
-    <Layout title='Admin Products'>
+    <>
       <div className='grid md:grid-cols-4 md:gap-5'>
         <div>
           <ul>
@@ -177,7 +176,7 @@ return (
           )}
         </div>
       </div>
-    </Layout>
+    </>
   </>
 );
 }

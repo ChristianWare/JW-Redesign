@@ -40,7 +40,7 @@ export default function Home({ products, blue }) {
       <Nav2 />
       <h2 className={styles.title}>POPULAR PRODUCTS</h2>
       <div className={styles.itemsGrid}>
-        {products.slice(0, 4).map((product) => (
+        {products.map((product) => (
           <ProductItem
             key={product.slug}
             product={product}
@@ -51,7 +51,7 @@ export default function Home({ products, blue }) {
       <div className={styles.btnContainer}>
         <Button text='See All' href='/products' />
       </div>
-      <Types />
+      {/* <Types /> */}
 
       {/* // add specialties and collection sections here // */}
     </>

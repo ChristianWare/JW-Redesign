@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Layout from "../../components/Layout";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
 import { getError } from "../../utils/error";
@@ -38,7 +37,7 @@ export default function AdminOrderScreen() {
   }, []);
 
   return (
-    <Layout title='Admin Dashboard'>
+    <>
       <div className='grid md:cols-4 md:gap-5'>
         <div>
           <ul>
@@ -116,7 +115,7 @@ export default function AdminOrderScreen() {
           )}
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 

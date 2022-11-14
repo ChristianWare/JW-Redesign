@@ -2,7 +2,6 @@ import axios from "axios";
 import Link from "next/link";
 import React, { useEffect, useReducer } from "react";
 import { toast } from "react-toastify";
-import Layout from "../../components/Layout";
 import { getError } from "../../utils/error";
 
 function reducer(state, action) {
@@ -68,7 +67,7 @@ function AdminUsersScreen() {
   };
 
   return (
-    <Layout title='Users'>
+    <>
       <div className='grid md:grid-cols-4 md:gap-5'>
         <div>
           <ul>
@@ -137,7 +136,7 @@ function AdminUsersScreen() {
           )}
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 

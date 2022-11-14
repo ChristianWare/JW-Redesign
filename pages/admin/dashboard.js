@@ -1,27 +1,7 @@
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
 import axios from "axios";
 import { useReducer, useEffect } from "react";
 import Link from "next/link";
-import Layout from "../../components/Layout";
 import { getError } from "../../utils/error";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 export const option = {
   responsive: true,
@@ -78,7 +58,7 @@ function AdminDashboardScreen() {
 
   return (
     <>
-      <Layout title='Admin Dashboard'>
+      <>
         <div className='grid md:grid-cols-4 md:gap-5'>
           <div>
             <ul>
@@ -145,7 +125,7 @@ function AdminDashboardScreen() {
             )}
           </div>
         </div>
-      </Layout>
+      </>
     </>
   );
 }
