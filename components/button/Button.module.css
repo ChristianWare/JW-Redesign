@@ -50,9 +50,9 @@
 }
 
 .orange {
-    background-color: var(--orange);
-    border: 1.5px solid var(--dark);
-    color: var(--light);
+    background-color: var(--light);
+    border: 1.5px solid var(--orange);
+    color: var(--orange);
 }
 
 .darkIcon {
@@ -66,6 +66,14 @@
 .whiteIcon {
     font-size: 15px;
     color: var(--light);
+    margin-left: 1rem;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.orangeIcon {
+    font-size: 15px;
+    color: var(--orange);
     margin-left: 1rem;
     transform: rotate(45deg);
     transition: all 0.3s ease;
@@ -100,8 +108,8 @@
 }
 
 .orange:hover {
-    background-color: var(--light);
-    color: var(--dark);
+    background-color: var(--orange);
+    color: var(--light);
 }
 
 .primary:hover .darkIcon {
@@ -124,8 +132,8 @@
     transform: rotate(0deg);
 }
 
-.orange:hover .whiteIcon {
-    color: var(--dark);
+.orange:hover .orangeIcon {
+    color: var(--light);
     transform: rotate(0deg);
 }
 

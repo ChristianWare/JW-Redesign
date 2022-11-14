@@ -1,5 +1,6 @@
 .container {
     border-top: none;
+    color: var(--color1);
 }
 
 .top {

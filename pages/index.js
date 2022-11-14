@@ -40,7 +40,7 @@ export default function Home({ products, blue }) {
       <Nav2 />
       <h2 className={styles.title}>POPULAR PRODUCTS</h2>
       <div className={styles.itemsGrid}>
-        {products.map((product) => (
+        {products.slice(0, 4).map((product) => (
           <ProductItem
             key={product.slug}
             product={product}
