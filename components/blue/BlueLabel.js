@@ -17,7 +17,7 @@ const BlueLabel = () => {
           <div className={styles.lowerTop}>
             <h3 className={styles.smallText}>A BLEND OF OUR RAREST WHISKEYS</h3>
             <div className={styles.imgContainer}>
-              <Image src={JW} width='50' height='83' />
+              <Image src={JW} width='50' height='83' alt='image' />
             </div>
             <h3 className={styles.scriptText}>John Walker & Sons</h3>
           </div>

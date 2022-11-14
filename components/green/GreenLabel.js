@@ -14,7 +14,7 @@ const GreenLabel = () => {
             <hr className={styles.hr1} />
             <hr className={styles.hr2} />
             <div className={styles.imgContainer}>
-              <Image src={JW} width='50' height='83' />
+              <Image src={JW} width='50' height='83' alt='image' />
             </div>
             <h3 className={styles.scriptText}>Blended Malt Scotch Whiskey</h3>
             <p>DISTILLED BLENDED AND BOTTLED IN SCOTTLAND</p>

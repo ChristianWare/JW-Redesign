@@ -12,23 +12,23 @@ const Types = () => {
       <h2>Types of Whisky</h2>
       <div className={styles.content}>
         <div className={styles.stuff}>
-          <Image src={w1} layout='responsive' objectFit='cover' />
+          <Image src={w1} layout='responsive' objectFit='cover' alt='image' />
           <p>Scotch – Scotland</p>
         </div>
         <div className={styles.stuff}>
-          <Image src={w2} layout='responsive' objectFit='cover' />
+          <Image src={w2} layout='responsive' objectFit='cover' alt='image' />
           <p>Bourbon – USA</p>
         </div>
         <div className={styles.stuff}>
-          <Image src={w3} layout='responsive' objectFit='cover' />
+          <Image src={w3} layout='responsive' objectFit='cover' alt='image' />
           <p>Irish Whiskey – Ireland</p>
         </div>
         <div className={styles.stuff}>
-          <Image src={w4} layout='responsive' objectFit='cover' />
+          <Image src={w4} layout='responsive' objectFit='cover' alt='image' />
           <p>Canadian Whiskey</p>
         </div>
         <div className={styles.stuff}>
-          <Image src={w5} layout='responsive' objectFit='cover' />
+          <Image src={w5} layout='responsive' objectFit='cover' alt='image' />
           <p>Japanese Whisky</p>
         </div>
       </div>

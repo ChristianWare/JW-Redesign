@@ -15,7 +15,7 @@ const Redlabel = () => {
           </div>
           <div className={styles.lowerTop}>
             <div className={styles.imgContainer}>
-              <Image src={JW} width='50' height='83' />
+              <Image src={JW} width='50' height='83' alt='image' />
             </div>
             <p className={styles.scriptText}>John Walker & Sons</p>
           </div>
