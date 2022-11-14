@@ -7,6 +7,7 @@ import { Store } from "../utils/Store";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import styles from "../styles/Cart.module.css";
+import Button2 from "../components/button2/Button2";
 
 function CartPage() {
   const router = useRouter();
@@ -31,105 +32,64 @@ function CartPage() {
 
   return (
     <div className={styles.container}>
-      {cartItems.map((item) => (
-        <h2 className={styles.cart}>CART ({item.quantity})</h2>
-      ))}
+      
+        <h2 className={styles.cart}>ITEMS IN YOUR CART :</h2>
+   
       {cartItems.length === 0 ? (
         <div>Cart Is Empty</div>
       ) : (
-        <table999>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cartItems.map((item) => (
-              <tr key={item.slug}>
-                <td>
-                  <Link href={`/product/${item.slug}`} legacyBehavior>
-                    <a className='flex items-center'>
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={50}
-                        height={50}
-                      />
-                      &nbsp;
-                      {item.name}
-                    </a>
+        <>
+          {cartItems.map((item) => (
+            <div className={styles.itemsContainer} key={item.slug}>
+              <div className={styles.box}>
+                <h6 className={styles.heading}>Product</h6>
+                <div className={styles.imgName}>
+                  <Link href={`/products/${item.slug}`}>
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={100}
+                      height={100}
+                    />
                   </Link>
-                </td>
-                <td>
-                  <select
-                    value={item.quantity}
-                    onChange={(e) => updateCartHandler(item, e.target.value)}
-                  >
-                    {[...Array(item.countInStock).keys()].map((x) => (
-                      <option key={x + 1} value={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </select>
-                </td>
-                <td className='p-5 text-right'>{item.price}</td>
-                <td className='p-5 text-center'>
-                  <button onClick={() => removeItemHandler(item)}>x</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table999>
-      )}
-      <div className='pb-3 text-xl'>
-        Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
-        {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
-      </div>
-      <button
-        onClick={() => router.push("login?redirect=/shipping")}
-        className='primary-button w-full'
-      >
-        Check Out
-      </button>
-      {cartItems.map((item) => (
-        <div className={styles.itemsContainer} key={item.slug}>
-          <div className={styles.box}>
-            <h6 className={styles.heading}>Product</h6>
-            <div className={styles.imgName}>
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={100}
-                height={100}
-              />
-              <p>{item.name}</p>
+                  <p>{item.name}</p>
+                </div>
+              </div>
+              <div className={styles.box}>
+                <h6 className={styles.heading}>Quantity</h6>
+                <select
+                  value={item.quantity}
+                  onChange={(e) => updateCartHandler(item, e.target.value)}
+                >
+                  {[...Array(item.countInStock).keys()].map((x) => (
+                    <option key={x + 1} value={x + 1}>
+                      {x + 1}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className={styles.box}>
+                <h6 className={styles.heading}>Price</h6>
+                <p>{item.price}</p>
+              </div>
+              <div className={styles.box}>
+                <h6 className={styles.heading}>Remove</h6>
+                <button onClick={() => removeItemHandler(item)}>x</button>
+              </div>
             </div>
-          </div>
-          <div className={styles.box}>
-            <h6 className={styles.heading}>Quantity</h6>
-            <select
-              value={item.quantity}
-              onChange={(e) => updateCartHandler(item, e.target.value)}
-            >
-              {[...Array(item.countInStock).keys()].map((x) => (
-                <option key={x + 1} value={x + 1}>
-                  {x + 1}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.box}>
-            <h6 className={styles.heading}>Price</h6>
-            <p>{item.price}</p>
-          </div>
-          <div className={styles.box}>
-            <h6 className={styles.heading}>Remove</h6>
-            <button onClick={() => removeItemHandler(item)}>x</button>
-          </div>
-        </div>
-      ))}
+          ))}
+        </>
+      )}
+      <div className={styles.subtotalCheckoutContainer}>
+        <h5>
+          Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
+          {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
+        </h5>
+        <Button2
+          text='Check Out'
+          onClick={() => router.push("login?redirect=/shipping")}
+        />
+      </div>
     </div>
   );
 }
