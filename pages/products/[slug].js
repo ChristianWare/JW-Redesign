@@ -1,6 +1,5 @@
 import { toast } from "react-toastify";
 import axios from "axios";
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useContext } from "react";
@@ -10,6 +9,7 @@ import Product from "../../models/Product";
 import styles from "../../styles/Slug.module.css";
 import Button from "../../components/button/Button";
 import ProductItem from "../../components/productItem/ProductItem";
+import Button2 from "../../components/button2/Button2";
 
 const SlugPage = ({ product, similar }) => {
   // const { product } = props;
@@ -56,7 +56,10 @@ const SlugPage = ({ product, similar }) => {
               <div className={styles.headingTextContainer}>
                 <h3>${product.price}</h3>
                 <div className={styles.btnContainer}>
-                  <Button text='Add To Cart' href='/' />
+                  <Button2
+                    text='Add To Cart'
+                    onClick={addToCartHandler}
+                  />
                 </div>
               </div>
               <div className={styles.headingTextContainer}>
