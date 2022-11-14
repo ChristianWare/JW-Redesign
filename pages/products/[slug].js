@@ -14,6 +14,7 @@ const SlugPage = (props) => {
   const { product } = props;
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
+  console.log(product)
   //   if (!product) {
   //     return <Layout title='Product Not Found'>Product Not Found</Layout>;
   //   }
@@ -52,13 +53,11 @@ const SlugPage = (props) => {
                 {product.name} {product.size}
               </h1>
               <div className={styles.headingTextContainer}>
+                <h3>${product.price}</h3>
+              </div>
+              <div className={styles.headingTextContainer}>
                 <h6>Description</h6>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae tenetur amet cum eveniet? Repudiandae debitis
-                  mollitia reiciendis minus nemo labore impedit quibusdam, neque
-                  ab fuga at ullam provident, dolorem adipisci.
-                </p>
+                <p>{product.description}</p>
               </div>
               <div className={styles.headingTextContainer}>
                 <h6 className={styles.h6}>Type</h6>
@@ -66,14 +65,14 @@ const SlugPage = (props) => {
               </div>
               <div className={styles.headingTextContainer}>
                 <h6 className={styles.h6}>ABV</h6>
-                <p>40%</p>
+                <p>{product.abv}%</p>
               </div>
               <div className={styles.headingTextContainer}>
                 <h6 className={styles.h6}>Taste</h6>
-                <p>Rich, Smoke, Honey, Spice, Long</p>
+                <p>{product.taste}</p>
               </div>
-                <div className={styles.btnContainer}>
-                  <Button text='Add To Cart' href='/' />
+              <div className={styles.btnContainer}>
+                <Button text='Add To Cart' href='/' />
               </div>
             </div>
           </div>
