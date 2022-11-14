@@ -49,7 +49,7 @@ export default function Home({ products, blue }) {
         ))}
       </div>
       <div className={styles.btnContainer}>
-        <Button text='See All' />
+        <Button text='See All' href='/products' />
       </div>
       <Types />
 

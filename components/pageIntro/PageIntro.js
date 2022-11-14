@@ -1,7 +1,7 @@
 import Button from '../button/Button';
 import styles from './PageIntro.module.css'
 
-const PageIntro = ({ title, text, btnText }) => {
+const PageIntro = ({ title, text, btnText, href }) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -12,7 +12,7 @@ const PageIntro = ({ title, text, btnText }) => {
           <div className={styles.topRight}>
             <p>{text}</p>
             <div className={styles.btnContainer}>
-              <Button text={btnText} />
+              <Button text={btnText} href={href} />
             </div>
           </div>
         </div>
