@@ -1,0 +1,32 @@
+.container {
+    padding: 3rem;
+}
+
+.labelInputBox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.labelInputBox label {
+    font-size: 2rem;
+}
+
+.labelInputBox input {
+    width: 50%;
+    resize: none;
+    padding: .5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--dark);
+    background-color: var(--light);
+    border: 1.5px solid var(--dark);
+    outline: none;
+}
+
+.btnContainer {
+    margin-top: 2rem;
+}
+
+.register {
+    margin-top: 2rem;
+}

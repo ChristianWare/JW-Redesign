@@ -2,6 +2,7 @@ import styles from "./ProductItem.module.css";
 import Image from "next/image";
 import Button from "../button/Button";
 import Link from "next/link";
+import Button2 from "../button2/Button2";
 
 const ProductItem = ({ product, addToCartHandler }) => {
   return (
@@ -23,7 +24,7 @@ const ProductItem = ({ product, addToCartHandler }) => {
         <p>${product.price}</p>
         <div className={styles.btnContainer}>
           <Button text='More Details' href={`/products/${product.slug}`} />
-          <Button text='Add to Cart' btnType='orange' iconColor='orangeIcon' />
+          <Button2 text='Add to Cart' onClick={() => addToCartHandler(product)} />
         </div>
       </div>
     </div>
