@@ -22,15 +22,6 @@ const GreenLabel = () => {
           {/* <div className={styles.lowerTop}></div> */}
         </div>
         <div className={styles.right}>
-          <p>
-            This quality scotch whiskey is created by blending only the finest
-            single malts. It is carefully created to ensure that you get the
-            perfect combination of whiskey flavors, aromas, and taste. The
-            whisky consists of four different at least 15 years old single malt
-            whiskies that have been blended from the four corners of Scotland to
-            create a refreshing flavor without sacrificing the intensity of
-            their smells and tastes.
-          </p>
           <div className={styles.btnContainer}>
             <Button
               text='Shop Green Label'

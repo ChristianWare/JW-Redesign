@@ -7,18 +7,24 @@ import PageIntro from "../pageIntro/PageIntro";
 const hero = () => {
   return (
     <>
-      <PageIntro
-        title='The Greatness of Johnnie'
-        text="Johnnie Walker may be the best-known name in scotch, and it's
-                also one of the most respected."
-        btnText='View Categlog'
-        href='/products'
-      />
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.bottom}>
-            <ImageSlider slides={SlideData} />
+          <div className={styles.top}>
+            <div className={styles.topLeft}>
+              <h1>THE GREATNESS OF JOHNNIE</h1>
+              <div className={styles.btnContainer}>
+                <Button text='View Categlog' />
+              </div>
+            </div>
+            <div className={styles.topRight}>
+              <ImageSlider slides={SlideData} />
+            </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.bottom}></div>
         </div>
       </div>
     </>

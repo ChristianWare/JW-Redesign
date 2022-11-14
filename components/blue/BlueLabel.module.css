@@ -6,13 +6,14 @@
 }
 
 .border {
-    padding: 2rem;
+    /* padding: 2rem; */
     width: 100%;
     border: 7px double var(--color8);
     padding: 1rem 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    /* gap: 2rem; */
 }
 
 .jwblText {
@@ -36,8 +37,7 @@
     font-weight: 400;
     font-size: 10rem;
     letter-spacing: .1rem;
-    position: relative;
-    top: -15px;
+    line-height: 120%;
 }
 
 .jwblText h3 {
@@ -47,7 +47,7 @@
     font-weight: 600;
     letter-spacing: .5rem;
     word-spacing: .5rem;
-    margin-top: -3rem;
+    /* margin-top: -3rem; */
 }
 
 .divider {
@@ -88,8 +88,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 3rem;
-    padding: 3rem;
+    /* gap: 3rem; */
+    padding: 1rem;
 }
 
 .btnContainer {

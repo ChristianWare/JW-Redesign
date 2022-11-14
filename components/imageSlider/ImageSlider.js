@@ -26,6 +26,20 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <section className='slider'>
+      {SlideData.map((slide, index) => {
+        return (
+          <div
+            className={
+              index === current
+                ? styles.slide + " " + styles.active
+                : styles.slide
+            }
+            key={index}
+          >
+            {index === current && <>{slide.slideComp}</>}
+          </div>
+        );
+      })}
       <div className={styles.sliderControls}>
         <Left onClick={prevSlide} className={styles.chevron} />
         {SlideData.map((slide, slideIndex) => {
@@ -45,20 +59,6 @@ const ImageSlider = ({ slides }) => {
         })}
         <Right onClick={nextSlide} className={styles.chevron} />
       </div>
-      {SlideData.map((slide, index) => {
-        return (
-          <div
-            className={
-              index === current
-                ? styles.slide + " " + styles.active
-                : styles.slide
-            }
-            key={index}
-          >
-            {index === current && <>{slide.slideComp}</>}
-          </div>
-        );
-      })}
     </section>
   );
 };

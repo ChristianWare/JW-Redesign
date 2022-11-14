@@ -23,16 +23,6 @@ const BlueLabel = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <p>
-            It is probably the most prestigious, most famous, and one of the
-            best-blended whiskies in the world. It’s made from only premium
-            whiskies from the oldest barrels from distilleries. It was made to
-            recreate the character of some of the earliest blends created in the
-            19th century and is now hard to beat. Each bottle is individually
-            numbered, and it bears no age statement. Once blended, the whiskies
-            were matured to create Blue Label, a whisky that embodies the
-            traditional Johnnie Walker character but is infused with smokiness.
-          </p>
           <div className={styles.btnContainer}>
             <Button
               text='Shop Blue Label'

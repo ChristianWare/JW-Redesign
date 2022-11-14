@@ -3,11 +3,9 @@
     align-items: center;
     justify-content: center;
     border: 1.5px solid var(--dark);
-    /* border-top: none; */
     user-select: none;
     padding: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .chevron {

@@ -21,16 +21,6 @@ const Redlabel = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <p>
-            This nonage whiskey is a combination of 40 different powerful and
-            spicy single malt and grain whiskies. It has a fruity nose with
-            hints of pear, apple, and vanilla with some lively species. The
-            sweet freshness remains on the tongue, but the most pronounced malt
-            aromas are pepper, vanilla, cinnamon, and ginger. Some might find
-            the herbal finish harsh, while others appreciate its long,
-            sophisticated, and smoky flavors. In any case, this unique end could
-            be considered as a signature of Johnnie Walker whiskies.
-          </p>
           <div className={styles.btnContainer}>
             <Button text='Shop Red Label' btnType='red' iconColor='whiteIcon' />
           </div>
