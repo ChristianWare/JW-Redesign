@@ -9,6 +9,50 @@
     overflow: hidden;
 }
 
+.navContainer {
+    margin-top: .5rem;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.navLeft {
+    display: flex;
+}
+
+.navRight {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+.navItem {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 @media screen and (max-width: 568px) {
     .container {

@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 import Nav from "../nav/Nav";
 import Nav2 from "../nav2/Nav2";
 import { useRouter } from "next/router";
+import Button from "../button/Button";
 
 const Layout = ({ children }) => {
   const { status, data: session } = useSession();
@@ -32,9 +33,40 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
       <ToastContainer position='bottom-center' limit={1} />
-      <Nav />
-      {router.pathname !== '/' && <Nav2 /> }
-      
+      {/* <Nav /> */}
+      <header className={styles.navContainer}>
+        <nav className={styles.navbar}>
+          <div className={styles.navLeft}>
+            <Button text='JW' href='/' />
+          </div>
+          <div className={styles.navRight}>
+            <ul className={styles.navmenu}>
+              <li className={styles.navItem}>
+                <Link href='/products' passHref legacyBehavior>
+                  <a title='Contact Page'>Catalog</a>
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link href='/cart' passHref legacyBehavior>
+                  <a title='Contact Page'>
+                    Cart:
+                    {cartItemsCount > 0 && <span className={styles.cartCount}>{" "}({cartItemsCount})</span>}
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link href='/login' passHref legacyBehavior>
+                  <a title='Contact Page'>
+                    {session?.user ? session.user.name : "Login"}
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      {router.pathname !== "/" && <Nav2 />}
+
       <div>{children}</div>
     </div>
   );

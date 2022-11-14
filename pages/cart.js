@@ -30,7 +30,40 @@ function CartPage() {
 
   return (
     <>
-        <h1>Shopping Cart</h1>
+      <h1>Shopping Cart</h1>
+      {cartItems.length === 0 ? (
+        <div>Cart Is Empty</div>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cartItems.map((item) => (
+              <tr key={item.slug}>
+                <td>
+                  <Link href={`/product/${item.slug}`} legacyBehavior>
+                    <a className='flex items-center'>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={50}
+                        height={50}
+                      />
+                      &nbsp;
+                      {item.name}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </>
   );
 };

@@ -1,6 +1,11 @@
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { ToastContainer } from "react-toastify";
+import { useContext, useState, useEffect } from "react";
+import { Store } from "../../utils/Store";
 import Button from "../button/Button";
 import styles from "./Nav.module.css";
+import Cookies from "js-cookie";
 
 const Nav = () => {
   return (
