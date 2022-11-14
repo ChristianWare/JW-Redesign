@@ -125,3 +125,5 @@ export default function shipping() {
     </>
   );
 }
+
+shipping.auth = true;
