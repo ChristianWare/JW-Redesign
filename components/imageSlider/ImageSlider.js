@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SlideData } from "../SlideData";
+import { SlideData } from "../slideData/SlideData";
 import Left from "../../public/icons/leftChev.svg";
 import Right from "../../public/icons/rightChev.svg";
 import styles from "./ImageSlider.module.css";

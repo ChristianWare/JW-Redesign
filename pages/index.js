@@ -7,7 +7,7 @@ import Hero from "../components/hero/Hero";
 import Head from "next/head";
 import Product from "../models/Product";
 import Nav2 from "../components/nav2/Nav2";
-import Types from "../components/types/Types";
+// import Types from "../components/types/Types";
 import ProductItem from "../components/productItem/ProductItem";
 import styles from "../styles/Home.module.css";
 import Button from "../components/button/Button";

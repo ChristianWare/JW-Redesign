@@ -1,7 +1,7 @@
 import Button from "../button/Button";
 import styles from "./Hero.module.css";
 import ImageSlider from "../imageSlider/ImageSlider";
-import { SlideData } from "../SlideData";
+import { SlideData } from "../slideData/SlideData";
 import PageIntro from "../pageIntro/PageIntro";
 
 const hero = () => {
