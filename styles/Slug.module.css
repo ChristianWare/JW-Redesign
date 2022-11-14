@@ -7,7 +7,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
-    padding: 3rem;
 }
 
 .topLeft, .topRight {
@@ -55,6 +54,15 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bottomBtns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:3rem;
+    width: 100%;
     margin-bottom: 2rem;
 }
 

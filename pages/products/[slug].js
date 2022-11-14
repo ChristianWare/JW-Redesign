@@ -55,6 +55,9 @@ const SlugPage = ({ product, similar }) => {
               </h1>
               <div className={styles.headingTextContainer}>
                 <h3>${product.price}</h3>
+                <div className={styles.btnContainer}>
+                  <Button text='Add To Cart' href='/' />
+                </div>
               </div>
               <div className={styles.headingTextContainer}>
                 <h6>Description</h6>
@@ -72,13 +75,13 @@ const SlugPage = ({ product, similar }) => {
                 <h6 className={styles.h6}>Taste</h6>
                 <p>{product.taste}</p>
               </div>
-              <div className={styles.btnContainer}>
-                <Button text='Add To Cart' href='/' />
-              </div>
             </div>
           </div>
           <div className={styles.bottom}>
-            <h4 className={styles.title}> Similar {product.label} label products....</h4>
+            <h4 className={styles.title}>
+              {" "}
+              Similar {product.label} label products....
+            </h4>
             <div className={styles.itemsGrid}>
               {similar.map((product) => (
                 <ProductItem
@@ -87,6 +90,10 @@ const SlugPage = ({ product, similar }) => {
                   addToCartHandler={addToCartHandler}
                 />
               ))}
+            </div>
+            <div className={styles.bottomBtns}>
+              <Button text='All Products' href='/products' />
+              <Button text='Home' href='/' />
             </div>
           </div>
         </div>
