@@ -56,6 +56,32 @@ const data = {
       taste: "Rich, Wood, Fruit, Balanced",
     },
     {
+      name: "Johnnie Walker Green Label2222",
+      slug: "johnnie-walker-green-label2222",
+      label: "green",
+      image: "/images/green.webp",
+      price: 64.99,
+      abv: 43,
+      size: "750 ML",
+      countInStock: 20,
+      description:
+        "A dynamic blend of Island and Speyside malts, each aged at least 15 years. The taste juxtaposes fresh fruit with wood smoke, pepper, deep vanilla and sandalwood. Perfectly balanced combination of only single malt whiskies that evokes the outdoors with its vibrant fresh flavor.",
+      taste: "Rich, Wood, Fruit, Balanced",
+    },
+    {
+      name: "Johnnie Walker Green Label3333",
+      slug: "johnnie-walker-green-label3333",
+      label: "green",
+      image: "/images/green.webp",
+      price: 64.99,
+      abv: 43,
+      size: "750 ML",
+      countInStock: 20,
+      description:
+        "A dynamic blend of Island and Speyside malts, each aged at least 15 years. The taste juxtaposes fresh fruit with wood smoke, pepper, deep vanilla and sandalwood. Perfectly balanced combination of only single malt whiskies that evokes the outdoors with its vibrant fresh flavor.",
+      taste: "Rich, Wood, Fruit, Balanced",
+    },
+    {
       name: "Johnnie Walker Black Label",
       slug: "johnnie-walker-black-label",
       label: "black",

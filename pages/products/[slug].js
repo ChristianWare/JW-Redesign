@@ -9,12 +9,13 @@ import db from "../../utils/db";
 import Product from "../../models/Product";
 import styles from "../../styles/Slug.module.css";
 import Button from "../../components/button/Button";
+import ProductItem from "../../components/productItem/ProductItem";
 
-const SlugPage = (props) => {
-  const { product } = props;
+const SlugPage = ({ product, similar }) => {
+  // const { product } = props;
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
-  console.log(product)
+  console.log(product);
   //   if (!product) {
   //     return <Layout title='Product Not Found'>Product Not Found</Layout>;
   //   }
@@ -76,9 +77,18 @@ const SlugPage = (props) => {
               </div>
             </div>
           </div>
-          {/* <div className={styles.bottom}>
-            <h2 className={styles.title}>YOU MAY BE INTERESTED IN ....</h2>
-          </div> */}
+          <div className={styles.bottom}>
+            <h4 className={styles.title}> Similar {product.label} label products....</h4>
+            <div className={styles.itemsGrid}>
+              {similar.map((product) => (
+                <ProductItem
+                  key={product.slug}
+                  product={product}
+                  addToCartHandler={addToCartHandler}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -92,12 +102,12 @@ export async function getServerSideProps(context) {
 
   await db.connect();
   const product = await Product.findOne({ slug }).lean();
+  const similar = await Product.find({ label: product.label }).lean();
   await db.disconnect();
   return {
     props: {
       product: product ? db.convertDocToObj(product) : null,
+      similar: similar.map(db.convertDocToObj),
     },
   };
 }
-
-
