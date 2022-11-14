@@ -17,8 +17,8 @@ const ProductItem = ({ product, addToCartHandler }) => {
           alt={product.name}
           // objectFit='cover'
           layout='responsive'
-          width='200'
-          height='200'
+          width='300'
+          height='300'
         />
         <p>Label: {product.label.toUpperCase()}</p>
         <p>${product.price}</p>
