@@ -1,0 +1,38 @@
+
+.container table {
+    width: 100%;
+}
+
+.container thead {
+    text-align: left;
+    border: 1.5px solid var(--dark);
+}
+
+
+.cart {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+/* 
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
+.imgName {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    border: 1.5px solid var(--dark);
+    padding: 1rem;
+}
