@@ -83,7 +83,7 @@ const SlugPage = ({ product, similar }) => {
           <div className={styles.bottom}>
             <h4 className={styles.title}>
               {" "}
-              Similar {product.label} label products....
+              Similar {product.label} label products ....
             </h4>
             <div className={styles.itemsGrid}>
               {similar.map((product) => (

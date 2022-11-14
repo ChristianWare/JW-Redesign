@@ -3,13 +3,10 @@ import Arrow from "../../public/icons/diag.svg";
 
 const Button2 = ({ text, onClick }) => {
   return (
-    <button onClick={onClick}>
-      <a className={styles.container}>
-        <button className={styles.primary}>
-          {text} <Arrow className={styles.icon} />
-        </button>
-      </a>
-    </button>
+ 
+      <button className={styles.primary} onClick={onClick}>
+        {text} <Arrow className={styles.icon} />
+      </button>
   );
 };
 export default Button2;
