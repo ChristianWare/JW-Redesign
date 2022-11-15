@@ -1,4 +1,5 @@
 import styles from "../styles/Payment.module.css";
+// import Layout from "../components/layout/Layout";
 import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
 import { useState, useContext, useEffect } from "react";
@@ -64,11 +65,11 @@ const Payment = () => {
         <div className={styles.btnContainer}>
           <Button
             text='Back'
-            btnType='orange'
-            iconColor="whiteIcon"
+            btnType='primary'
+            iconColor="darkIcon"
             href='/shipping'
           />
-          <Button2 text='Next' btnType='primary' iconColor='darkIcon' />
+          <Button2 text='Next' btnType='orange' iconColor='whiteIcon' />
         </div>
       </form>
     </Layout>

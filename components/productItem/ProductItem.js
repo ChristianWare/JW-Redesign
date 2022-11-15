@@ -28,6 +28,8 @@ const ProductItem = ({ product, addToCartHandler, imgContainer='small' }) => {
           <Button text='More Details' href={`/products/${product.slug}`} />
           <Button2
             text='Add to Cart'
+            btnType="primary"
+            iconColor="darkIcon"
             onClick={() => addToCartHandler(product)}
           />
         </div>

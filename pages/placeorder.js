@@ -9,7 +9,7 @@ import Image from "next/image";
 import { getError } from "../utils/error";
 import Cookies from "js-cookie";
 import styles from "../styles/PlaceOrderScreen.module.css";
-import Button from "../components/button/Button";
+import Button2 from "../components/button2/Button2";
 
 export default function PlaceOrderScreen() {
   const { state, dispatch } = useContext(Store);
@@ -156,9 +156,9 @@ export default function PlaceOrderScreen() {
                     </li>
                   </ul>
                 </div>
-                <Button text="Place Order" btnType="orange" iconColor="whiteIcon" onClick={placeOrderHandler}>
+                <Button2 text="Place Order" btnType="orange" iconColor="whiteIcon" onClick={placeOrderHandler}>
                   {loading ? "Loading..." : "Place order"}
-                </Button>
+                </Button2>
               </div>
             </div>
           </div>
