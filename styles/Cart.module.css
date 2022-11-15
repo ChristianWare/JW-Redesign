@@ -1,3 +1,17 @@
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.left { 
+    flex: 3;
+}
+
+.right {
+    flex: 1;
+}
+
 
 .container table {
     width: 100%;
@@ -42,6 +56,14 @@
     border: 1.5px solid var(--dark);
 }
 
+.removeHeading {
+    margin-top: 1rem;
+}
+
+.heading {
+    margin-bottom: 1rem;
+}
+
 .subtotalCheckoutContainer {
     display: flex;
     flex-direction: column;
@@ -49,4 +71,12 @@
     gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 968px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }

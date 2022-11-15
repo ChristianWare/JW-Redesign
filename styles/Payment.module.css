@@ -1,0 +1,22 @@
+.formContent {
+    padding: 3rem;
+}
+
+.title {
+    color: var(--dark);
+}
+
+.labelInputBox {
+    padding: 1rem;
+}
+
+.labelInputBox label {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}

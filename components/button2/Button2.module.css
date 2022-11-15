@@ -32,6 +32,14 @@
     transition: all 0.3s ease;
 }
 
+.darkIcon {
+    font-size: 15px;
+    color: var(--dark);
+    margin-left: 1rem;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
 .orange:hover {
     background-color: var(--light);
     color: var(--dark);
@@ -42,20 +50,13 @@
     transform: rotate(0deg);
 }
 
-.icon {
-    font-size: 15px;
-    color: var(--dark);
-    margin-left: 1rem;
-    transform: rotate(45deg);
-    transition: all 0.3s ease;
-}
 
 .primary:hover  {
     background-color: var(--orange);
     color: var(--light);
 }
 
-.primary:hover .icon {
+.primary:hover .darkIcon {
     color: var(--light);
     transform: rotate(0deg);
 }

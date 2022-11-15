@@ -34,64 +34,74 @@ function CartPage() {
   return (
     <Layout title='Cart'>
       <h2 className={styles.cart}>ITEMS IN YOUR CART :</h2>
-      {cartItems.length === 0 ? (
-        <div>Cart Is Empty</div>
-      ) : (
-        <>
-          {cartItems.map((item) => (
-            <div className={styles.itemsContainer} key={item.slug}>
-              <div className={styles.box}>
-                <h6 className={styles.heading}>Product</h6>
-                <div className={styles.imgName}>
-                  <Link href={`/products/${item.slug}`}>
-                    <a className={styles.imgLink}>
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={100}
-                        height={100}
-                      />
-                    </a>
-                  </Link>
-                  <p>{item.name}</p>
+      <div className={styles.content}>
+        <div className={styles.left}>
+          {cartItems.length === 0 ? (
+            <div>Cart Is Empty</div>
+          ) : (
+            <>
+              {cartItems.map((item) => (
+                <div className={styles.itemsContainer} key={item.slug}>
+                  <div className={styles.box}>
+                    <h6 className={styles.heading}>Product</h6>
+                    <div className={styles.imgName}>
+                      <Link href={`/products/${item.slug}`}>
+                        <a className={styles.imgLink}>
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            width={100}
+                            height={100}
+                          />
+                        </a>
+                      </Link>
+                      <p>{item.name}</p>
+                    </div>
+                  </div>
+                  <div className={styles.box}>
+                    <h6 className={styles.heading}>Quantity</h6>
+                    <div className={styles.select}>
+                      <select
+                        value={item.quantity}
+                        onChange={(e) =>
+                          updateCartHandler(item, e.target.value)
+                        }
+                      >
+                        {[...Array(item.countInStock).keys()].map((x) => (
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>
+                        ))}
+                      </select>
+                        <h6 className={styles.removeHeading}>Remove</h6>
+                        <button className={styles.remove} onClick={() => removeItemHandler(item)}>
+                          x
+                        </button>
+                    </div>
+                  </div>
+                  <div className={styles.box}>
+                    <h6 className={styles.heading}>Price</h6>
+                    <p>{item.price}</p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.box}>
-                <h6 className={styles.heading}>Quantity</h6>
-                <div className={styles.select}>
-                  <select
-                    value={item.quantity}
-                    onChange={(e) => updateCartHandler(item, e.target.value)}
-                  >
-                    {[...Array(item.countInStock).keys()].map((x) => (
-                      <option key={x + 1} value={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              <div className={styles.box}>
-                <h6 className={styles.heading}>Price</h6>
-                <p>{item.price}</p>
-              </div>
-              <div className={styles.box}>
-                <h6 className={styles.heading}>Remove</h6>
-                <button onClick={() => removeItemHandler(item)}>x</button>
-              </div>
-            </div>
-          ))}
-        </>
-      )}
-      <div className={styles.subtotalCheckoutContainer}>
-        <h5>
-          Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
-          {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
-        </h5>
-        <Button2
-          text='Check Out'
-          onClick={() => router.push("login?redirect=/shipping")}
-        />
+              ))}
+            </>
+          )}
+        </div>
+        <div className={styles.right}>
+          <div className={styles.subtotalCheckoutContainer}>
+            <h5>
+              Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
+              {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
+            </h5>
+            <Button2
+              text='Check Out'
+              iconColor='whiteIcon'
+              btnType="orange"
+              onClick={() => router.push("login?redirect=/shipping")}
+            />
+          </div>
+        </div>
       </div>
     </Layout>
   );
