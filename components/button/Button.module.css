@@ -50,9 +50,9 @@
 }
 
 .orange {
-    background-color: var(--light);
-    border: 1.5px solid var(--orange);
-    color: var(--orange);
+    background-color: var(--orange);
+    border: 1.5px solid var(--dark);
+    color: var(--light);
 }
 
 .darkIcon {
@@ -71,13 +71,13 @@
     transition: all 0.3s ease;
 }
 
-.orangeIcon {
+/* .orangeIcon {
     font-size: 15px;
     color: var(--orange);
     margin-left: 1rem;
     transform: rotate(45deg);
     transition: all 0.3s ease;
-}
+} */
 
 .primary:hover  {
     background-color: var(--orange);
@@ -108,8 +108,8 @@
 }
 
 .orange:hover {
-    background-color: var(--orange);
-    color: var(--light);
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 .primary:hover .darkIcon {
@@ -132,8 +132,8 @@
     transform: rotate(0deg);
 }
 
-.orange:hover .orangeIcon {
-    color: var(--light);
+.orange:hover .whiteIcon {
+    color: var(--dark);
     transform: rotate(0deg);
 }
 

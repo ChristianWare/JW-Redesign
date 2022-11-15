@@ -5,8 +5,9 @@ import { useForm } from "react-hook-form";
 import { getError } from "../utils/error";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-import styles from '../styles/Login.module.css'
+import styles from "../styles/Login.module.css";
 import Button2 from "../components/button2/Button2";
+import Button from "../components/button/Button";
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -78,6 +79,7 @@ export default function LoginScreen() {
         </div>
         <div className={styles.btnContainer}>
           <Button2 text='Login' />
+          <Button text='Register' btnType='orange' iconColor='whiteIcon' />
         </div>
         <p className={styles.register}>
           Don&apos;t have an account? &nbsp;

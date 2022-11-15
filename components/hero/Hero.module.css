@@ -18,6 +18,7 @@
 .topLeft h1 {
     text-transform: uppercase;
     line-height: 120%;
+    color: var(--color1)
 }
 
 .topRight {
