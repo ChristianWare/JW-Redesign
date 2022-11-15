@@ -39,7 +39,7 @@ const Layout = ({ children, title }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className={styles.container}>
-        <ToastContainer position='bottom-center' limit={1} />
+        <ToastContainer position='bottom-center' limit={10} />
         <header className={styles.navContainer}>
           <nav className={styles.navbar}>
             <div className={styles.navLeft}>
