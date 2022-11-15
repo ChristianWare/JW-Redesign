@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/Login.module.css";
 import Button2 from "../components/button2/Button2";
 import Button from "../components/button/Button";
+import Layout from "../components/layout/Layout";
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -41,51 +42,56 @@ export default function LoginScreen() {
     }
   };
   return (
-    <div className={styles.container}>
-      <h1>LOGIN</h1>
-      <form onSubmit={handleSubmit(submitHandler)}>
-        <div className={styles.labelInputBox}>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            {...register("email", {
-              required: "Please enter email",
-              pattern: {
-                value: /^[A-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-                message: "Please enter valid email",
-              },
-            })}
-            id='email'
-            autoFocus
-          ></input>
-          {errors.email && (
-            <div className='text-red-500'>{errors.email.message}</div>
-          )}
-        </div>
-        <div className={styles.labelInputBox}>
-          <label htmlFor='password'>Password</label>
-          <input
-            type='password'
-            {...register("password", {
-              required: "Please enter password",
-              minLength: { value: 6, message: "password is more than 5 chars" },
-            })}
-            id='password'
-            autoFocus
-          ></input>
-          {errors.password && (
-            <div className='text-red-500 '>{errors.password.message}</div>
-          )}
-        </div>
-        <div className={styles.btnContainer}>
-          <Button2 text='Login' />
-          <Button text='Register' btnType='orange' iconColor='whiteIcon' />
-        </div>
-        <p className={styles.register}>
-          Don&apos;t have an account? &nbsp;
-          <Link href={`/register?redirect=${redirect || "/"}`}>Register</Link>
-        </p>
-      </form>
-    </div>
+    <Layout title='Login'>
+      <div className={styles.container}>
+        <h1>LOGIN</h1>
+        <form onSubmit={handleSubmit(submitHandler)}>
+          <div className={styles.labelInputBox}>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              {...register("email", {
+                required: "Please enter email",
+                pattern: {
+                  value: /^[A-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
+                  message: "Please enter valid email",
+                },
+              })}
+              id='email'
+              autoFocus
+            ></input>
+            {errors.email && (
+              <div className='text-red-500'>{errors.email.message}</div>
+            )}
+          </div>
+          <div className={styles.labelInputBox}>
+            <label htmlFor='password'>Password</label>
+            <input
+              type='password'
+              {...register("password", {
+                required: "Please enter password",
+                minLength: {
+                  value: 6,
+                  message: "password is more than 5 chars",
+                },
+              })}
+              id='password'
+              autoFocus
+            ></input>
+            {errors.password && (
+              <div className='text-red-500 '>{errors.password.message}</div>
+            )}
+          </div>
+          <div className={styles.btnContainer}>
+            <Button2 text='Login' />
+            <Button text='Register' btnType='orange' iconColor='whiteIcon' />
+          </div>
+          <p className={styles.register}>
+            Don&apos;t have an account? &nbsp;
+            <Link href={`/register?redirect=${redirect || "/"}`}>Register</Link>
+          </p>
+        </form>
+      </div>
+    </Layout>
   );
 }

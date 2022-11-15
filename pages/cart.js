@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import styles from "../styles/Cart.module.css";
 import Button2 from "../components/button2/Button2";
+import Layout from "../components/layout/Layout";
 
 function CartPage() {
   const router = useRouter();
@@ -31,9 +32,8 @@ function CartPage() {
   };
 
   return (
-    <div className={styles.container}>
+    <Layout title='Cart'>
       <h2 className={styles.cart}>ITEMS IN YOUR CART :</h2>
-
       {cartItems.length === 0 ? (
         <div>Cart Is Empty</div>
       ) : (
@@ -93,7 +93,7 @@ function CartPage() {
           onClick={() => router.push("login?redirect=/shipping")}
         />
       </div>
-    </div>
+    </Layout>
   );
 }
 

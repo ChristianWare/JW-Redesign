@@ -46,6 +46,7 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    user-select: none;
 }
 
 .dropdownMenu {
@@ -57,17 +58,28 @@
     padding: 1rem;
     border: 1.5px solid var(--dark);
     border-top: none;
+    z-index: 999;
+}
+
+.dropdownMenu ul {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .active {
     display: block;
 }
 
-
 .dropdownItem {
-    /* display: flex; */
     list-style: none;
-    margin: 1rem auto;
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    /* margin: 1rem auto; */
 }
 
 .dropdownItem a {

@@ -4,12 +4,12 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import Hero from "../components/hero/Hero";
-import Head from "next/head";
 import Product from "../models/Product";
 import Nav2 from "../components/nav2/Nav2";
 import ProductItem from "../components/productItem/ProductItem";
 import styles from "../styles/Home.module.css";
 import Button from "../components/button/Button";
+import Layout from "../components/layout/Layout";
 
 export default function Home({ products, blue }) {
   const { state, dispatch } = useContext(Store);
@@ -29,7 +29,7 @@ export default function Home({ products, blue }) {
   };
 
   return (
-    <>
+    <Layout title='Home Page'>
       <Hero />
       <Nav2 />
       <h2 className={styles.title}>BEST SELLERS</h2>
@@ -59,7 +59,7 @@ export default function Home({ products, blue }) {
       <div className={styles.btnContainer}>
         <Button text='See All' href='/products' />
       </div>
-    </>
+    </Layout>
   );
 }
 

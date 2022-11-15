@@ -10,15 +10,16 @@ import styles from "../../styles/Slug.module.css";
 import Button from "../../components/button/Button";
 import ProductItem from "../../components/productItem/ProductItem";
 import Button2 from "../../components/button2/Button2";
+import Layout from "../../components/layout/Layout";
 
 const SlugPage = ({ product, similar }) => {
   // const { product } = props;
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
   console.log(product);
-  //   if (!product) {
-  //     return <Layout title='Product Not Found'>Product Not Found</Layout>;
-  //   }
+    if (!product) {
+      return <Layout title='Product Not Found'>Product Not Found</Layout>;
+    }
 
   const addToCartHandler = async () => {
     const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
@@ -34,7 +35,7 @@ const SlugPage = ({ product, similar }) => {
   };
 
   return (
-    <>
+    <Layout title={product.name}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.top}>
@@ -99,7 +100,7 @@ const SlugPage = ({ product, similar }) => {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 export default SlugPage;

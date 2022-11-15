@@ -3,7 +3,6 @@ import { SessionProvider, useSession } from "next-auth/react";
 import { StoreProvider } from "../utils/Store";
 import { useRouter } from "next/router";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import Layout from "../components/layout/Layout";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -12,14 +11,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <PayPalScriptProvider deferLoading={true}>
           {Component.auth ? (
             <Auth adminOnly={Component.auth.adminOnly}>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
+              <Component {...pageProps} />
             </Auth>
           ) : (
-            <Layout>
+            <>
               <Component {...pageProps} />
-            </Layout>
+            </>
           )}
         </PayPalScriptProvider>
       </StoreProvider>

@@ -98,28 +98,6 @@ const Layout = ({ children, title }) => {
                         />
                       </ul>
                     </div>
-                    {/* <li className={styles.navItem}>
-                      <Link href='/login' passHref legacyBehavior>
-                        <a title='Contact Page'>Profile</a>
-                      </Link>
-                    </li>
-                    <li className={styles.navItem}>
-                      <Link href='/login' passHref legacyBehavior>
-                        <a title='Contact Page'>Order History</a>
-                      </Link>
-                    </li>
-                    {session.user.isAdmin && (
-                      <li className={styles.navItem}>
-                        <Link href='/login' passHref legacyBehavior>
-                          <a title='Contact Page'>Admin Dashboard</a>
-                        </Link>
-                      </li>
-                    )}
-                    <li className={styles.navItem}>
-                      <a title='Contact Page' href='#' onClick={logoutHandler}>
-                        Log Out
-                      </a>
-                    </li> */}
                   </>
                 ) : (
                   <li className={styles.navItem}>
