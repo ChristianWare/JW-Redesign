@@ -1,0 +1,50 @@
+.container {
+    padding: 3rem 0;
+}
+
+.container h1 {
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.labelInputBox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.labelInputBox label {
+    font-size: 2rem;
+}
+
+.labelInputBox input {
+    width: 50%;
+    resize: none;
+    padding: .5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--dark);
+    background-color: var(--light);
+    border: 1.5px solid var(--dark);
+    outline: none;
+}
+
+.btnContainer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.register {
+    margin-top: 2rem;
+}
+
+.loginBtn {
+    margin-top: 2rem;
+}
+
+.loginBtn span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+}
