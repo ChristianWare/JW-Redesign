@@ -1,5 +1,14 @@
-.container {
-    padding: 3rem 0;
+.formContent {
+    padding: 3rem;
+}
+
+.title {
+    color: var(--dark);
+    margin-top: 3rem;
+}
+
+.formContent {
+    display: flex;flex-direction: column;
 }
 
 .labelInputBox {
@@ -10,10 +19,11 @@
 
 .labelInputBox label {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .labelInputBox input {
-    width: 50%;
+    width: 60%;
     resize: none;
     padding: .5rem;
     font-size: 1.8rem;
@@ -28,8 +38,4 @@
     margin-top: 2rem;
     display: flex;
     gap: 2rem;
-}
-
-.register {
-    margin-top: 2rem;
 }

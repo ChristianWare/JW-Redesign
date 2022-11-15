@@ -1,4 +1,4 @@
-.primary {
+.primary, .orange {
     display: block;
     text-transform: uppercase;
     font-weight: 700;
@@ -16,6 +16,30 @@
     user-select: none;
     background-color: var(--light);
     border: solid 1.5px var(--dark);
+}
+
+.orange {
+    background-color: var(--orange);
+    border: 1.5px solid var(--dark);
+    color: var(--light);
+}
+
+.whiteIcon {
+    font-size: 15px;
+    color: var(--light);
+    margin-left: 1rem;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.orange:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.orange:hover .whiteIcon {
+    color: var(--dark);
+    transform: rotate(0deg);
 }
 
 .icon {
@@ -38,7 +62,7 @@
 
 
 @media screen and (max-width: 568px) {
-    .primary {
+    .primary, .orange {
         width: 100%;
     }
 }

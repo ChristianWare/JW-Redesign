@@ -84,7 +84,7 @@ export default function LoginScreen() {
           </div>
           <div className={styles.btnContainer}>
             <Button2 text='Login' />
-            <Button text='Register' btnType='orange' iconColor='whiteIcon' />
+            <Button text='Register' btnType='orange' iconColor='whiteIcon' href='/register' />
           </div>
           <p className={styles.register}>
             Don&apos;t have an account? &nbsp;
