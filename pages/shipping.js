@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/ShippingPage.module.css";
 import Button2 from "../components/button2/Button2";
 
-const shippingPage = () => {
+const ShippingPage = () => {
   const {
     handleSubmit,
     register,
@@ -133,4 +133,4 @@ const shippingPage = () => {
     </Layout>
   );
 };
-export default shippingPage;
+export default ShippingPage;

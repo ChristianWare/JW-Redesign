@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import Button2 from "../components/button2/Button2";
 
-const payment = () => {
+const Payment = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
 
   const { state, dispatch } = useContext(Store);
@@ -73,4 +73,4 @@ const payment = () => {
     </Layout>
   );
 };
-export default payment;
+export default Payment;

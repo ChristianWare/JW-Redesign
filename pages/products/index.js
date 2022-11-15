@@ -9,7 +9,7 @@ import PageIntro from "../../components/pageIntro/PageIntro";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export default function products({ products }) {
+export default function Products({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
