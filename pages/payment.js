@@ -6,6 +6,7 @@ import { Store } from "../utils/Store";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import Button2 from "../components/button2/Button2";
+import Button from "../components/button/Button";
 
 const Payment = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
@@ -61,12 +62,12 @@ const Payment = () => {
           </div>
         ))}
         <div className={styles.btnContainer}>
-          <Button2
+          <Button
             text='Back'
             btnType='orange'
-            onClick={() => router.push("/shipping")}
+            iconColor="whiteIcon"
+            href='/shipping'
           />
-
           <Button2 text='Next' btnType='primary' iconColor='darkIcon' />
         </div>
       </form>

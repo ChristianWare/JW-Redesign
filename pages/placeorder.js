@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import { Store } from "../utils/Store";
 import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
-// import Layout from "../components/Layout";
-import Layout from '../components/layout/Layout'
+import Layout from "../components/layout/Layout";
 import Image from "next/image";
 import { getError } from "../utils/error";
 import Cookies from "js-cookie";
+import styles from "../styles/PlaceOrderScreen.module.css";
 
 export default function PlaceOrderScreen() {
   const { state, dispatch } = useContext(Store);
@@ -64,108 +64,141 @@ export default function PlaceOrderScreen() {
 
   return (
     <Layout title='Place order'>
-      <h1 className='mb-4 text-xl'>Place order</h1>
+      <h1 className={styles.title}>CONFORM THE FOLLOWING:</h1>
       {cartItems.length === 0 ? (
         <div>
           Cart is empty. <Link href='/'>Go Shopping</Link>
         </div>
       ) : (
-        <div className='gird md:grid-cols-4 md:gap-5'>
-          <div className='overflow-x-auto md:col-span-3'>
-            <div className='card p-5'>
-              <h2 className='mb-2 text-lg'>Shipping Address</h2>
-              <div>
-                {shippingAddress.fullName} <br />
-                {shippingAddress.address} <br />
-                {shippingAddress.city}, {shippingAddress.postalCode},{" "}
-                {shippingAddress.country}
-              </div>
-              <div>
-                <Link href='/shipping'>Edit</Link>
-              </div>
-              <div className='card p-5'>
-                <h2 className='mb-2 text-lg'>Payment Method</h2>
-                <div>{paymentMethod}</div>
-                <div>
-                  <Link href='/payment'>Edit</Link>
+        <div>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <div className={styles.detailsContainer}>
+                <div className={styles.details}>
+                  <h5>Shipping Address</h5>
+                  <div>
+                    {shippingAddress.fullName} <br />
+                    {shippingAddress.address} <br />
+                    {shippingAddress.city}, {shippingAddress.postalCode},{" "}
+                    {shippingAddress.country}
+                  </div>
+                  <div>
+                    <Link href='/shipping'>
+                      <a className={styles.edit}>Edit</a>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className='card overflow-x-auto p-5'>
-                <h2 className='mb-2 text-lg'>Order Items</h2>
-                <table className='min-w-full'>
-                  <thead className='border-b'>
-                    <tr>
-                      <th className='px-5 text-left'>Item</th>
-                      <th className='p-5 text-right'>Quantity</th>
-                      <th className='p-5 text-right'>Price</th>
-                      <th className='p-5 text-right'>Subtotal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {cartItems.map((item) => (
-                      <tr key={item._id} className='border-b'>
-                        <td>
-                          <Link href={`/product/${item.slug}`}>
-                            <a className='flex  items-center'>
+                <div className={styles.details}>
+                  <h5>Payment Method</h5>
+                  <div>{paymentMethod}</div>
+                  <div>
+                    <Link href='/payment'>
+                      <a className={styles.edit}>Edit</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className={styles.details}>
+                  <h5>Order Items</h5>
+                  {/* <table>
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {cartItems.map((item) => (
+                        <tr key={item._id}>
+                          <td>
+                            <Link href={`/product/${item.slug}`}>
+                              <a>
+                                <Image
+                                  src={item.image}
+                                  alt={item.name}
+                                  width={50}
+                                  height={50}
+                                />
+                                &nbsp;
+                                {item.name}
+                              </a>
+                            </Link>
+                          </td>
+                          <td>{item.quantity}</td>
+                          <td>{item.price}</td>
+                          <td>${item.quantity * item.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table> */}
+                  {cartItems.map((item) => (
+                    <div className={styles.itemsContainer} key={item.slug}>
+                      <div className={styles.box}>
+                        <h6 className={styles.heading}>Product</h6>
+                        <div className={styles.imgName}>
+                          <Link href={`/products/${item.slug}`}>
+                            <a className={styles.imgLink}>
                               <Image
                                 src={item.image}
                                 alt={item.name}
-                                width={50}
-                                height={50}
+                                width={100}
+                                height={100}
                               />
-                              &nbsp;
-                              {item.name}
                             </a>
                           </Link>
-                        </td>
-                        <td className='p-5 text-right'>{item.quantity}</td>
-                        <td className='p-5 text-right'>{item.price}</td>
-                        <td className='p-5 text-right'>
-                          ${item.quantity * item.price}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div>
-                  <Link href='/cart'>Edit</Link>
+                          <p>{item.name}</p>
+                        </div>
+                      </div>
+                      <div className={styles.box}>
+                        <h6 className={styles.heading}>Quantity</h6>
+
+                        <p>{item.quantity}</p>
+                      </div>
+                      <div className={styles.box}>
+                        <h6 className={styles.heading}>Price</h6>
+                        <p>{item.price}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <div>
+                    <Link href='/cart'>
+                      <a className={styles.edit}>Edit</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-            <div>
-              <div className='card p-5'>
-                <h2 className='mb-2 text-lg'>Order Summary</h2>
+            <div className={styles.right}>
+              <div className={styles.detailsContainer}>
+                <h5>Order Summary</h5>
                 <ul>
                   <li>
-                    <div className='mb-2 flex justify-between'>
+                    <div>
                       <div>Items</div>
                       <div>${itemsPrice}</div>
                     </div>
                   </li>
                   <li>
-                    <div className='mb-2 flex justify-between'>
+                    <div>
                       <div>Tax</div>
                       <div>${taxPrice}</div>
                     </div>
                   </li>
                   <li>
-                    <div className='mb-2 flex justify-between'>
+                    <div>
                       <div>Shipping</div>
                       <div>${shippingPrice}</div>
                     </div>
                   </li>
                   <li>
-                    <div className='mb-2 flex justify-between'>
+                    <div>
                       <div>Total</div>
                       <div>${totalPrice}</div>
                     </div>
                   </li>
                   <li>
-                    <button
-                      disabled={loading}
-                      onClick={placeOrderHandler}
-                      className='primary-button w-full'
-                    >
+                    <button disabled={loading} onClick={placeOrderHandler}>
                       {loading ? "Loading..." : "Place order"}
                     </button>
                   </li>
