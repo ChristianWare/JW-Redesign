@@ -3,7 +3,7 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import  { useRouter } from "next/router";
 import { useEffect, useReducer } from "react";
 import { toast } from "react-toastify";
 import Layout from "../../components/layout/Layout";
@@ -44,12 +44,14 @@ function reducer(state, action) {
       state;
   }
 }
+
 function OrderScreen() {
   const { data: session } = useSession();
   // order/:id
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
   const { query } = useRouter();
+  const router = useRouter();
   const orderId = query.id;
 
   const [
@@ -144,6 +146,7 @@ function OrderScreen() {
         );
         dispatch({ type: "PAY_SUCCESS", payload: data });
         toast.success("Order is paid successgully");
+        router.push('/thankyou');
       } catch (err) {
         dispatch({ type: "PAY_FAIL", payload: getError(err) });
         toast.error(getError(err));
