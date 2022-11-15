@@ -45,6 +45,33 @@
 .navItem {
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 66px;
+    right: 100;
+    background-color: var(--light);
+    padding: 1rem;
+    border: 1.5px solid var(--dark);
+    border-top: none;
+}
+
+.active {
+    display: block;
+}
+
+
+.dropdownItem {
+    /* display: flex; */
+    list-style: none;
+    margin: 1rem auto;
+}
+
+.dropdownItem a {
+    transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 480px) {
