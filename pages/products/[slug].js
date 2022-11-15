@@ -84,7 +84,7 @@ const SlugPage = ({ product, similar }) => {
               Similar {product.label} label products ....
             </h4>
             <div className={styles.itemsGrid}>
-              {similar.map((product) => (
+              {similar.slice(0, 4).map((product) => (
                 <ProductItem
                   key={product.slug}
                   product={product}

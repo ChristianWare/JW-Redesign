@@ -37,9 +37,9 @@ export default function Home({ products, blue }) {
       </Head>
       <Hero />
       <Nav2 />
-      <h2 className={styles.title}>POPULAR PRODUCTS</h2>
+      <h2 className={styles.title}>BEST SELLERS</h2>
       <div className={styles.itemsGrid}>
-        {products.map((product) => (
+        {products.slice(1, 5).map((product) => (
           <ProductItem
             key={product.slug}
             product={product}
@@ -50,9 +50,20 @@ export default function Home({ products, blue }) {
       <div className={styles.btnContainer}>
         <Button text='See All' href='/products' />
       </div>
-      {/* <Types /> */}
 
-      {/* // add specialties and collection sections here // */}
+      <h2 className={styles.title2}>BEST IN BLUE</h2>
+      <div className={styles.itemsGrid2}>
+        {blue.map((product) => (
+          <ProductItem
+            key={product.slug}
+            product={product}
+            addToCartHandler={addToCartHandler}
+          />
+        ))}
+      </div>
+      <div className={styles.btnContainer}>
+        <Button text='See All' href='/products' />
+      </div>
     </>
   );
 }

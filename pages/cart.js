@@ -32,9 +32,8 @@ function CartPage() {
 
   return (
     <div className={styles.container}>
-      
-        <h2 className={styles.cart}>ITEMS IN YOUR CART :</h2>
-   
+      <h2 className={styles.cart}>ITEMS IN YOUR CART :</h2>
+
       {cartItems.length === 0 ? (
         <div>Cart Is Empty</div>
       ) : (
@@ -45,28 +44,32 @@ function CartPage() {
                 <h6 className={styles.heading}>Product</h6>
                 <div className={styles.imgName}>
                   <Link href={`/products/${item.slug}`}>
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={100}
-                      height={100}
-                    />
+                    <a className={styles.imgLink}>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={100}
+                        height={100}
+                      />
+                    </a>
                   </Link>
                   <p>{item.name}</p>
                 </div>
               </div>
               <div className={styles.box}>
                 <h6 className={styles.heading}>Quantity</h6>
-                <select
-                  value={item.quantity}
-                  onChange={(e) => updateCartHandler(item, e.target.value)}
-                >
-                  {[...Array(item.countInStock).keys()].map((x) => (
-                    <option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </option>
-                  ))}
-                </select>
+                <div className={styles.select}>
+                  <select
+                    value={item.quantity}
+                    onChange={(e) => updateCartHandler(item, e.target.value)}
+                  >
+                    {[...Array(item.countInStock).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               <div className={styles.box}>
                 <h6 className={styles.heading}>Price</h6>

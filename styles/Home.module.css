@@ -1,8 +1,9 @@
-.title {
-    color: var(--color1);
+.title, .title2 {
+    color: var(--dark);
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 
 .itemsGrid {
     display: grid;
@@ -11,9 +12,17 @@
     margin-bottom: 2rem;
 }
 
+.itemsGrid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
 .btnContainer {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 568px) {

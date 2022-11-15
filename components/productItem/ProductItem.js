@@ -12,19 +12,24 @@ const ProductItem = ({ product, addToCartHandler }) => {
           <a className={styles.name}>{product.name}</a>
         </Link>
         <p>{product.size}</p>
-        <Image
-          src={product.image}
-          alt={product.name}
-          // objectFit='cover'
-          layout='responsive'
-          width='300'
-          height='300'
-        />
+        <div className={styles.imgContainer}>
+          <Image
+            src={product.image}
+            alt={product.name}
+            objectFit='cover'
+            layout='responsive'
+            width='300'
+            height='300'
+          />
+        </div>
         <p>Label: {product.label.toUpperCase()}</p>
         <p>${product.price}</p>
         <div className={styles.btnContainer}>
           <Button text='More Details' href={`/products/${product.slug}`} />
-          <Button2 text='Add to Cart' onClick={() => addToCartHandler(product)} />
+          <Button2
+            text='Add to Cart'
+            onClick={() => addToCartHandler(product)}
+          />
         </div>
       </div>
     </div>

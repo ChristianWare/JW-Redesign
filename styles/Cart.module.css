@@ -27,9 +27,19 @@
     align-items: center;
 }
 
+.imgLink {
+    cursor: pointer;
+}
+
 .box {
     border: 1.5px solid var(--dark);
     padding: 1rem;
+}
+
+.select select {
+    background-color: var(--light);
+    padding: 1rem;
+    border: 1.5px solid var(--dark);
 }
 
 .subtotalCheckoutContainer {
