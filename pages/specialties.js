@@ -6,7 +6,7 @@ const specialties = () => {
     <Layout title='Specialties'>
       <PageIntro
         title='Johnnie Walker Specialties'
-        text='Scotland- This new whisky is chill filtered to 1.5 degrees celcius and best served cold directly from the freezer. Featuring notes of caramelized sugar and vanilla, fresh red berries with a touch of orchard fruit, this whisky develops in complexity as it warms to room temperature.'
+        text='Infinitely collectable. The perfect gifts for whisky fans. These Johnnie Walker limited edition blends are only available for a short time. Discover exclusive bottle designs, gift sets and limited release blends for extra special moments.'
         btnText='Shop Specialties'
       />
     </Layout>
