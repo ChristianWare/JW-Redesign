@@ -16,7 +16,6 @@ const SlugPage = ({ product, similar }) => {
   // const { product } = props;
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
-  console.log(product);
     if (!product) {
       return <Layout title='Product Not Found'>Product Not Found</Layout>;
     }
