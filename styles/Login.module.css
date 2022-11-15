@@ -33,3 +33,14 @@
 .register {
     margin-top: 2rem;
 }
+
+.loginBtn {
+    margin-top: 2rem;
+}
+
+.loginBtn span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}

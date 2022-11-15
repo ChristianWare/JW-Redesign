@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import styles from "../styles/Login.module.css";
 import Button2 from "../components/button2/Button2";
-import Button from "../components/button/Button";
 import Layout from "../components/layout/Layout";
 
 export default function LoginScreen() {
@@ -83,13 +82,15 @@ export default function LoginScreen() {
             )}
           </div>
           <div className={styles.btnContainer}>
-            <Button2 text='Login' />
-            <Button text='Register' btnType='orange' iconColor='whiteIcon' href='/register' />
+            <Button2 text='Login' btnType='orange' />
+            {/* <Button text='Register' btnType='orange' iconColor='whiteIcon' href='/register' /> */}
           </div>
-          <p className={styles.register}>
-            Don&apos;t have an account? &nbsp;
-            <Link href={`/register?redirect=${redirect || "/"}`}>Register</Link>
-          </p>
+          <div className={styles.loginBtn}>
+            Don't have an account? &nbsp;
+            <Link href='/register'>
+              <span>Register</span>
+            </Link>
+          </div>
         </form>
       </div>
     </Layout>
