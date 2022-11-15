@@ -11,7 +11,7 @@ const hero = () => {
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.topLeft}>
-              <h1>THE GREATNESS OF JOHNNIE</h1>
+              <h1>The greatness of Johnnie</h1>
               <div className={styles.btnContainer}>
                 <Button text='View Categlog' />
               </div>
