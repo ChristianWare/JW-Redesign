@@ -29,7 +29,7 @@ export default function Home({ products, blue }) {
   };
 
   return (
-    <Layout title='Home Page'>
+    <Layout title='Home'>
       <Hero />
       <Nav2 />
       <h2 className={styles.title}>BEST SELLERS</h2>

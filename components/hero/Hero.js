@@ -13,7 +13,7 @@ const hero = () => {
             <div className={styles.topLeft}>
               <h1>The greatness of Johnnie</h1>
               <div className={styles.btnContainer}>
-                <Button text='View Categlog' />
+                <Button text='View Categlog' href='/products' />
               </div>
             </div>
             <div className={styles.topRight}>
