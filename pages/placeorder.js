@@ -9,6 +9,7 @@ import Image from "next/image";
 import { getError } from "../utils/error";
 import Cookies from "js-cookie";
 import styles from "../styles/PlaceOrderScreen.module.css";
+import Button from "../components/button/Button";
 
 export default function PlaceOrderScreen() {
   const { state, dispatch } = useContext(Store);
@@ -64,7 +65,7 @@ export default function PlaceOrderScreen() {
 
   return (
     <Layout title='Place order'>
-      <h1 className={styles.title}>CONFORM THE FOLLOWING:</h1>
+      <h1 className={styles.title}>CONFIRM THE FOLLOWING:</h1>
       {cartItems.length === 0 ? (
         <div>
           Cart is empty. <Link href='/'>Go Shopping</Link>
@@ -99,39 +100,6 @@ export default function PlaceOrderScreen() {
                 </div>
                 <div className={styles.details}>
                   <h5>Order Items</h5>
-                  {/* <table>
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Subtotal</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {cartItems.map((item) => (
-                        <tr key={item._id}>
-                          <td>
-                            <Link href={`/product/${item.slug}`}>
-                              <a>
-                                <Image
-                                  src={item.image}
-                                  alt={item.name}
-                                  width={50}
-                                  height={50}
-                                />
-                                &nbsp;
-                                {item.name}
-                              </a>
-                            </Link>
-                          </td>
-                          <td>{item.quantity}</td>
-                          <td>{item.price}</td>
-                          <td>${item.quantity * item.price}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table> */}
                   {cartItems.map((item) => (
                     <div className={styles.itemsContainer} key={item.slug}>
                       <div className={styles.box}>
@@ -171,38 +139,26 @@ export default function PlaceOrderScreen() {
             </div>
             <div className={styles.right}>
               <div className={styles.detailsContainer}>
-                <h5>Order Summary</h5>
-                <ul>
-                  <li>
-                    <div>
-                      <div>Items</div>
-                      <div>${itemsPrice}</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div>Tax</div>
-                      <div>${taxPrice}</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div>Shipping</div>
-                      <div>${shippingPrice}</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div>Total</div>
-                      <div>${totalPrice}</div>
-                    </div>
-                  </li>
-                  <li>
-                    <button disabled={loading} onClick={placeOrderHandler}>
-                      {loading ? "Loading..." : "Place order"}
-                    </button>
-                  </li>
-                </ul>
+                <div className={styles.details}>
+                  <h5 className={styles.orderSummary}>Order Summary</h5>
+                  <ul>
+                    <li className={styles.liFlex}>
+                      <span>Items</span>${itemsPrice}
+                    </li>
+                    <li className={styles.liFlex}>
+                      <span>Tax</span>${taxPrice}
+                    </li>
+                    <li className={styles.liFlex}>
+                      <span>Shipping</span>${shippingPrice}
+                    </li>
+                    <li className={styles.liFlex}>
+                      <span>Total</span>${totalPrice}
+                    </li>
+                  </ul>
+                </div>
+                <Button text="Place Order" btnType="orange" iconColor="whiteIcon" onClick={placeOrderHandler}>
+                  {loading ? "Loading..." : "Place order"}
+                </Button>
               </div>
             </div>
           </div>
