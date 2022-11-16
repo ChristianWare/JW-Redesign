@@ -86,11 +86,14 @@ const Layout = ({ children, title }) => {
                     >
                       <ul>
                         <DropdownItem text='Profile' href='/profile' />
-                        <DropdownItem text='Order History' href='/' />
+                        <DropdownItem
+                          text='Order History'
+                          href='/order-history'
+                        />
                         {session.user.isAdmin && (
                           <DropdownItem text='Admin Dashboard' href='/' />
                         )}
-                        <DropdownItem text='Profile' href='/' />
+                        <DropdownItem text='Profile' href='/profile' />
                         <DropdownItem
                           text='Logout'
                           href='/'
