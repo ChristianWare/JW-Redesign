@@ -6,6 +6,12 @@ import { useRouter } from "next/router";
 const BlueLabel = () => {
   const router = useRouter();
 
+  const onClick = () => {
+    if (router.pathname === "/") {
+      router.push("/blue");
+    } return
+  }
+
   return (
     <div
       className={
@@ -13,7 +19,7 @@ const BlueLabel = () => {
           ? styles.container + " " + styles.hover
           : styles.container
       }
-      onClick={() => router.push("/blue")}
+      onClick={onClick}
     >
       <div className={styles.border}>
         <div className={styles.left}>

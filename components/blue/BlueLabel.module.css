@@ -3,10 +3,17 @@
     border-color: var(--color1);
     background-color: var(--color1);
     padding: 1rem;
+    border: 5px solid var(--color1);
 }
 
 .hover {
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    border: 5px solid var(--orange);
+
 }
 
 .border {
