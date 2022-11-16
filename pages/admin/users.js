@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useReducer } from "react";
 import { toast } from "react-toastify";
 import { getError } from "../../utils/error";
+import Layout from "../../components/layout/Layout";
+import styles from "../../styles/Users.module.css";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -67,76 +69,69 @@ function AdminUsersScreen() {
   };
 
   return (
-    <>
-      <div className='grid md:grid-cols-4 md:gap-5'>
+    <Layout title='Users'>
+      <div className={styles.content}>
+        <ul className={styles.leftNavOptions}>
+          <li className={styles.menuLink}>
+            <Link href='/admin/dashboard'>
+              <a>Dashboard</a>
+            </Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/orders'>Orders</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/products'>Products</Link>
+          </li>
+          <li className={styles.activeLink}>
+            <Link href='/admin/users'>Users</Link>
+          </li>
+        </ul>
         <div>
-          <ul>
-            <li>
-              <Link href='/admin/dashboard'>Dashboard</Link>
-            </li>
-            <li>
-              <Link href='/admin/orders'>Orders</Link>
-            </li>
-            <li>
-              <Link href='/admin/products'>Products</Link>
-            </li>
-            <li>
-              <Link href='/admin/users'>
-                <a className='font-bold'>Users</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className='overflow-x-auto md:col-span-3'>
-          <h1 className='mb-4 text-xl'>Users</h1>
+          <h1 className={styles.title}>Users</h1>
           {loadingDelete && <div>Deleting...</div>}
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
             <div className='alert-error'>{error}</div>
           ) : (
-            <div className='overflow-x-auto'>
-              <table className='min-w-full'>
-                <thead className='border-b'>
-                  <tr>
-                    <th className='px-5 text-left'>ID</th>
-                    <th className='p-5 text-left'>NAME</th>
-                    <th className='p-5 text-left'>EMAIL</th>
-                    <th className='p-5 text-left'>ADMIN</th>
-                    <th className='p-5 text-left'>ACTIONS</th>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>EMAIL</th>
+                  <th>ADMIN</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user) => (
+                  <tr key={user._id} className='border-b'>
+                    <td>{user._id.substring(20, 24)}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.isAdmin ? "YES" : "NO"}</td>
+                    <td>
+                      <Link href={`/admin/user/${user._id}`} passHref>
+                        <a className={styles.edit}>Edit</a>
+                      </Link>
+                      &nbsp;
+                      <p
+                        className={styles.delete}
+                        onClick={() => deleteHandler(user._id)}
+                      >
+                        Delete
+                      </p>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {users.map((user) => (
-                    <tr key={user._id} className='border-b'>
-                      <td className=' p-5 '>{user._id.substring(20, 24)}</td>
-                      <td className=' p-5 '>{user.name}</td>
-                      <td className=' p-5 '>{user.email}</td>
-                      <td className=' p-5 '>{user.isAdmin ? "YES" : "NO"}</td>
-                      <td className=' p-5 '>
-                        <Link href={`/admin/user/${user._id}`} passHref>
-                          <a type='button' className='default-button'>
-                            Edit
-                          </a>
-                        </Link>
-                        &nbsp;
-                        <button
-                          type='button'
-                          className='default-button'
-                          onClick={() => deleteHandler(user._id)}
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           )}
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
 
