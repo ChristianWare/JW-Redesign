@@ -7,7 +7,7 @@ import ProductItem from "../components/productItem/ProductItem";
 import { useContext } from "react";
 import { Store } from "../utils/Store";
 
-function thankyou({ specialties }) {
+function ThankYou({ specialties }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -49,8 +49,8 @@ function thankyou({ specialties }) {
   );
 }
 
-thankyou.auth = true;
-export default thankyou;
+ThankYou.auth = true;
+export default ThankYou;
 
 export async function getServerSideProps() {
   await db.connect();
