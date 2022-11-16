@@ -176,6 +176,7 @@ function OrderScreen() {
   return (
     <Layout title={`Order ${orderId}`}>
       <h1 className={styles.title}>{`ORDER: ${orderId}`}</h1>
+      {/* <h1 className={styles.title}>PAYMENT OPTIONS</h1> */}
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
@@ -208,7 +209,7 @@ function OrderScreen() {
               <div className={styles.detailsContainer}>
                 <div className={styles.details}>
                   <div>
-                    <h5>Payment Method</h5>
+                    <h5>Payment Method Selected:</h5>
                     <div>{paymentMethod}</div>
                     {isPaid ? (
                       <p className={styles.delivered}>Paid at {paidAt}</p>
@@ -260,19 +261,21 @@ function OrderScreen() {
             <div className={styles.right}>
               <div999 className={styles.detailsContainer}>
                 <div className={styles.details}>
-                  <h5 className={styles.orderSummary}>Order Summary</h5>
+                  <h5 className={styles.orderSummary}>
+                    {isDelivered ? "Order Summary" : "Please Pay"}
+                  </h5>
                   <ul>
                     <li className={styles.liFlex}>
-                      <span>Items</span>${itemsPrice}
+                      <span>Items</span>${itemsPrice.toLocaleString()}
                     </li>
                     <li className={styles.liFlex}>
-                      <span>Tax</span>${taxPrice}
+                      <span>Tax</span>${taxPrice.toLocaleString()}
                     </li>
                     <li className={styles.liFlex}>
                       <span>Shipping</span>${shippingPrice}
                     </li>
                     <li className={styles.liFlex}>
-                      <span>Total</span>${totalPrice}
+                      <span>Total</span>${totalPrice.toLocaleString()}
                     </li>
                   </ul>
                   {!isPaid && (

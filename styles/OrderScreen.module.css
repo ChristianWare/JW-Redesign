@@ -67,6 +67,7 @@
     text-transform: uppercase;
     color: red;
     padding: 0.5rem;
+    padding-left: 0;
 }
 
 .details table {

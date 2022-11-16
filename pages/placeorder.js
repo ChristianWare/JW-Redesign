@@ -90,7 +90,7 @@ export default function PlaceOrderScreen() {
                   </div>
                 </div>
                 <div className={styles.details}>
-                  <h5>Payment Method</h5>
+                  <h5>Payment Method Selected</h5>
                   <div>{paymentMethod}</div>
                   <div>
                     <Link href='/payment'>
@@ -143,16 +143,16 @@ export default function PlaceOrderScreen() {
                   <h5 className={styles.orderSummary}>Order Summary</h5>
                   <ul>
                     <li className={styles.liFlex}>
-                      <span>Items</span>${itemsPrice}
+                      <span>Items</span>${itemsPrice.toLocaleString()}
                     </li>
                     <li className={styles.liFlex}>
-                      <span>Tax</span>${taxPrice}
+                      <span>Tax</span>${taxPrice.toLocaleString()}
                     </li>
                     <li className={styles.liFlex}>
-                      <span>Shipping</span>${shippingPrice}
+                      <span>Shipping</span>${shippingPrice.toLocaleString()}
                     </li>
                     <li className={styles.liFlex}>
-                      <span>Total</span>${totalPrice}
+                      <span>Total</span>${totalPrice.toLocaleString()}
                     </li>
                   </ul>
                 </div>

@@ -46,7 +46,7 @@ const Payment = () => {
     <Layout title='Payment Method'>
       <form onSubmit={submitHandler} className={styles.formContent}>
         <h1 className={styles.title}>PAYMENT METHOD</h1>
-        {["Paypal", "Stripe", "CashOnDelivery"].map((payment) => (
+        {["PayPal", "Venmo", "Credit Card"].map((payment) => (
           <div key={payment} className={styles.content}>
             <div className={styles.labelInputBox}>
               <input
