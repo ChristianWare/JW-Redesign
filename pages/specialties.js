@@ -10,7 +10,6 @@ import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
 
 const SpecialtiesPage = ({ specialties }) => {
-  console.log(specialties)
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 

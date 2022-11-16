@@ -1,0 +1,17 @@
+.itemsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.content h2 {
+    text-transform: uppercase;
+    color: var(--dark);
+    border-top: 1.5px solid var(--dark);
+    border-bottom: 1.5px solid var(--dark);
+    margin-top: 5rem;
+    line-height: 100%;
+    padding: 1rem;
+}
