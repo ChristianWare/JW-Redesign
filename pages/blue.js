@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import BlueLabel from "../components/blue/BlueLabel";
 
 const bluePage = ({ blue }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,6 +28,9 @@ const bluePage = ({ blue }) => {
   };
   return (
     <Layout title='Blue'>
+      <div className={styles.labelContainer}>
+        <BlueLabel />
+      </div>
       <PageIntro
         title='The Greatness of Blue'
         text='Scotland- Created from the rarest and most expensive whiskies in the world, individually numbered and produced in limited quantities. Johnnie Walker Blue has the authentic character and flavor of a traditional 19th century blend with traces of smoke, honey and spice on the silky finish.'

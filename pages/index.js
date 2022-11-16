@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.css";
 import Button from "../components/button/Button";
 import Layout from "../components/layout/Layout";
 
-export default function Home({ products, blue }) {
+export default function Home({ products, blue, green }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -43,11 +43,15 @@ export default function Home({ products, blue }) {
         ))}
       </div>
       <div className={styles.btnContainer}>
-        <Button text='See All' href='/products' />
+        <Button
+          text='See All'
+          btnType='orange'
+          iconColor='whiteIcon'
+          href='/products'
+        />
       </div>
-
       <h2 className={styles.title2}>BEST IN BLUE</h2>
-      <div className={styles.itemsGrid2}>
+      <div className={styles.itemsGrid}>
         {blue.map((product) => (
           <ProductItem
             key={product.slug}
@@ -57,7 +61,30 @@ export default function Home({ products, blue }) {
         ))}
       </div>
       <div className={styles.btnContainer}>
-        <Button text='All Blue' href='/blue' />
+        <Button
+          text='All Blue'
+          btnType='orange'
+          iconColor='whiteIcon'
+          href='/blue'
+        />
+      </div>
+      <h2 className={styles.title}>GREEN GUYS</h2>
+      <div className={styles.itemsGrid}>
+        {green.map((product) => (
+          <ProductItem
+            key={product.slug}
+            product={product}
+            addToCartHandler={addToCartHandler}
+          />
+        ))}
+      </div>
+      <div className={styles.btnContainer}>
+        <Button
+          text='All Green'
+          btnType='orange'
+          iconColor='whiteIcon'
+          href='/green'
+        />
       </div>
     </Layout>
   );
@@ -67,11 +94,13 @@ export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find().lean();
   const blue = await Product.find({ label: "blue" }).lean();
+  const green = await Product.find({ label: "green" }).lean();
 
   return {
     props: {
       products: products.map(db.convertDocToObj),
       blue: blue.map(db.convertDocToObj),
+      green: green.map(db.convertDocToObj),
     },
   };
 }

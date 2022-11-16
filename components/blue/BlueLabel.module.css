@@ -5,6 +5,10 @@
     padding: 1rem;
 }
 
+.hover {
+    cursor: pointer;
+}
+
 .border {
     /* padding: 2rem; */
     width: 100%;
