@@ -5,7 +5,6 @@ import Layout from "../components/layout/Layout";
 import { getError } from "../utils/error";
 import styles from "../styles/OrderHistory.module.css";
 
-
 function reducer(state, action) {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -78,7 +77,7 @@ function OrderHistoryScreen() {
                     </td>
                     <td className='p-5'>
                       <Link href={`/order/${order._id}`} passHref>
-                        <a>Details</a>
+                        <a className={styles.details}>Details</a>
                       </Link>
                     </td>
                   </tr>

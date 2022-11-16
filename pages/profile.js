@@ -52,7 +52,7 @@ export default function ProfileScreen() {
           <h1 className={styles.title}>Update Profile</h1>
 
           <div className={styles.labelInputBox}>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>Update Name</label>
             <input
               type='text'
               id='name'
@@ -67,7 +67,7 @@ export default function ProfileScreen() {
           </div>
 
           <div className={styles.labelInputBox}>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>Update Email</label>
             <input
               type='email'
               id='email'
@@ -85,7 +85,7 @@ export default function ProfileScreen() {
           </div>
 
           <div className={styles.labelInputBox}>
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>Update Password</label>
             <input
               type='password'
               id='password'
@@ -102,7 +102,7 @@ export default function ProfileScreen() {
           </div>
 
           <div className={styles.labelInputBox}>
-            <label htmlFor='confirmPassword'>Confirm Password</label>
+            <label htmlFor='confirmPassword'>Confirm Update Password</label>
             <input
               type='password'
               id='confirmPassword'

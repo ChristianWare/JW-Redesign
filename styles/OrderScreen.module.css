@@ -1,7 +1,6 @@
 .title {
     color: var(--dark);
-        word-break: break-all;
-    /* hyphens: auto; */
+    word-break: break-all;
     margin-top: 3rem;
 }
 
@@ -55,4 +54,37 @@
     border: 1.5px solid var(--dark);
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.delivered {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: green;
+    cursor: pointer;
+}
+
+.notDelivered {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.details table {
+    /* border: 3px solid var(--orange); */
+    padding: 1rem;
+    width: 100%;
+}
+
+.details th {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.details td {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
 }

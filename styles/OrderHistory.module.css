@@ -2,6 +2,33 @@
     padding: 3rem 0;
 }
 
+.container table {
+    border: 3px solid var(--orange);
+    padding: 1rem;
+    width: 100%;
+}
+
+.container th {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.container td {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.details {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}
+
+
+
 .container h1 {
     color: var(--dark);
     text-transform: uppercase;

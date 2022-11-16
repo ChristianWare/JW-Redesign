@@ -5,6 +5,7 @@
 .container h1 {
     color: var(--dark);
     text-transform: uppercase;
+    margin-bottom: 3rem;
 }
 
 .labelInputBox {
@@ -15,6 +16,10 @@
 
 .labelInputBox label {
     font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark);
+    line-height: 70%;
 }
 
 .labelInputBox input {
@@ -27,6 +32,7 @@
     background-color: var(--light);
     border: 1.5px solid var(--dark);
     outline: none;
+    margin-bottom: 3rem;
 }
 
 .btnContainer {

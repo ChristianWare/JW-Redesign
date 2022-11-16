@@ -192,9 +192,9 @@ function OrderScreen() {
                     {shippingAddress.country}
                   </div>
                   {isDelivered ? (
-                    <div>Delivered at {deliveredAt}</div>
+                    <p className={styles.delivered}>Delivered at {deliveredAt}</p>
                   ) : (
-                    <div>Not delivered</div>
+                    <p className={styles.notDelivered}>Not delivered</p>
                   )}
                 </div>
               </div>
