@@ -50,6 +50,13 @@
     padding: 1rem;
 }
 
+.detailsBtn {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+} 
+
 @media screen and (max-width: 768px) {
     .table, .table table, .table th, .table td {
         padding: 0.5rem;

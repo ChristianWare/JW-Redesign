@@ -188,8 +188,11 @@ function OrderScreen() {
                 <div className={styles.details}>
                   <h5>Shipping Address</h5>
                   <div>
-                    {shippingAddress.fullName}, {shippingAddress.address},{" "}
-                    {shippingAddress.city}, {shippingAddress.postalCode},{" "}
+                    {shippingAddress.fullName}
+                    <br />
+                    {shippingAddress.address}
+                    <br />
+                    {shippingAddress.city} {shippingAddress.postalCode} <br />{" "}
                     {shippingAddress.country}
                   </div>
                   {isDelivered ? (
@@ -207,7 +210,11 @@ function OrderScreen() {
                   <div>
                     <h5>Payment Method</h5>
                     <div>{paymentMethod}</div>
-                    {isPaid ? <div>Paid at {paidAt}</div> : <div>Not paid</div>}
+                    {isPaid ? (
+                      <p className={styles.delivered}>Paid at {paidAt}</p>
+                    ) : (
+                      <p className={styles.notDelivered}>Not paid</p>
+                    )}
                   </div>
                 </div>
               </div>

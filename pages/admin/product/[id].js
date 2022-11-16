@@ -5,6 +5,10 @@ import { useReducer, useEffect } from "react";
 import { useRouter } from "next/router";
 import { getError } from "../../../utils/error";
 import Link from "next/link";
+import Layout from "../../../components/layout/Layout";
+import styles from "../../../styles/AdminProductEditScreen.module.css";
+import Button2 from "../../../components/button2/Button2";
+import Button from "../../../components/button/Button";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -40,10 +44,11 @@ function reducer(state, action) {
 export default function AdminProductEditScreen() {
   const { query } = useRouter();
   const productId = query.id;
-  const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] = useReducer(reducer, {
-    loading: true,
-    error: "",
-  });
+  const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
+    useReducer(reducer, {
+      loading: true,
+      error: "",
+    });
 
   const {
     register,
@@ -62,8 +67,8 @@ export default function AdminProductEditScreen() {
         setValue("slug", data.slug);
         setValue("price", data.price);
         setValue("image", data.image);
-        setValue("category", data.category);
-        setValue("brand", data.brand);
+        // setValue("category", data.category);
+        // setValue("brand", data.brand);
         setValue("countInStock", data.countInStock);
         setValue("description", data.description);
       } catch (err) {
@@ -103,9 +108,9 @@ export default function AdminProductEditScreen() {
     name,
     slug,
     price,
-    category,
+    // category,
     image,
-    brand,
+    // brand,
     countInStock,
     description,
   }) => {
@@ -115,9 +120,9 @@ export default function AdminProductEditScreen() {
         name,
         slug,
         price,
-        category,
+        // category,
         image,
-        brand,
+        // brand,
         countInStock,
         description,
       });
@@ -131,44 +136,36 @@ export default function AdminProductEditScreen() {
   };
 
   return (
-    <>
-      <div className='grid md:grid-cols-4 md:gap-5'>
+    <Layout title='Edit Product'>
+      <div className={styles.content}>
+        <ul className={styles.leftNavOptions}>
+          <li className={styles.menuLink}>
+            <Link href='/admin/dashboard'>
+              <a>Dashboard</a>
+            </Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/orders'>Orders</Link>
+          </li>
+          <li className={styles.activeLink}>
+            <Link href='/admin/products'>Products: (Edit)</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/users'>Users</Link>
+          </li>
+        </ul>
         <div>
-          <ul>
-            <li>
-              <Link href='/admin/dashboard'>Dashboard</Link>
-            </li>
-            <li>
-              <Link href='/admin/orders'>Orders</Link>
-            </li>
-            <li>
-              <Link href='/admin/products'>
-                <a className='font-bold'>Products</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/admin/users'>
-                <a>Users</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className='md:col-span-3'>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
             <div className='alert-error'>{error}</div>
           ) : (
-            <form
-              className='mx-auto max-w-screen-md'
-              onSubmit={handleSubmit(submitHandler)}
-            >
-              <h1 className='mb-4 text-xl'>{`Edit product ${productId}`}</h1>
-              <div className='mdb-4'>
+            <form onSubmit={handleSubmit(submitHandler)}>
+              <h1 className={styles.title}>{`Edit product: ${productId}`}</h1>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='name'>Name</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='name'
                   autoFocus
                   {...register("name", {
@@ -179,11 +176,10 @@ export default function AdminProductEditScreen() {
                   <div className='text-red-500'>{errors.name.message}</div>
                 )}
               </div>
-              <div className='mdb-4'>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='slug'>Slug</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='slug'
                   {...register("slug", {
                     required: "Please enter slug",
@@ -193,11 +189,10 @@ export default function AdminProductEditScreen() {
                   <div className='text-red-500'>{errors.slug.message}</div>
                 )}
               </div>
-              <div className='mb-4'>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='price'>Price</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='price'
                   {...register("price", {
                     required: "Please enter price",
@@ -207,11 +202,10 @@ export default function AdminProductEditScreen() {
                   <div className='text-red-500'>{errors.price.message}</div>
                 )}
               </div>
-              <div className='mb-4'>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='image'>Image</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='image'
                   {...register("image", {
                     required: "Please enter image",
@@ -221,21 +215,15 @@ export default function AdminProductEditScreen() {
                   <div className='text-red-500'>{errors.image.message}</div>
                 )}
               </div>
-              <div className='mb-4'>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='imageFile'>Upload Image</label>
-                <input
-                  type='file'
-                  className='w-full'
-                  id='imageFile'
-                  onChange={uploadHandler}
-                />
+                <input type='file' id='imageFile' onChange={uploadHandler} />
                 {loadingUpload && <div>Uploading...</div>}
               </div>
-              <div className='mdb-4'>
+              {/* <div className={styles.labelInputBox}>
                 <label htmlFor='category'>Category</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='category'
                   {...register("category", {
                     required: "Please enter category",
@@ -244,12 +232,11 @@ export default function AdminProductEditScreen() {
                 {errors.category && (
                   <div className='text-red-500'>{errors.category.message}</div>
                 )}
-              </div>
-              <div className='mdb-4'>
+              </div> */}
+              {/* <div className={styles.labelInputBox}>
                 <label htmlFor='brand'>Brand</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='brand'
                   {...register("brand", {
                     required: "Please enter brand",
@@ -258,12 +245,11 @@ export default function AdminProductEditScreen() {
                 {errors.brand && (
                   <div className='text-red-500'>{errors.brand.message}</div>
                 )}
-              </div>
-              <div className='mdb-4'>
+              </div> */}
+              <div className={styles.labelInputBox}>
                 <label htmlFor='countInStock'>Count In Stock</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='countInStock'
                   {...register("countInStock", {
                     required: "Please enter countInStock",
@@ -275,11 +261,10 @@ export default function AdminProductEditScreen() {
                   </div>
                 )}
               </div>
-              <div className='mb-4'>
+              <div className={styles.labelInputBox}>
                 <label htmlFor='description'>Description</label>
                 <input
                   type='text'
-                  className='w-full'
                   id='description'
                   {...register("description", {
                     required: "Please enter description",
@@ -291,19 +276,18 @@ export default function AdminProductEditScreen() {
                   </div>
                 )}
               </div>
-              <div className='mb-4'>
-                <button disabled={loadingUpdate} className='primary-button'>
-                  {loadingUpdate ? "Loading" : "Update"}
-                </button>
-              </div>
-              <div className='mb-4'>
-                <Link href={`/admin/products`}>Back</Link>
+              <div className={styles.btnContainer}>
+                <Button2
+                  text={loadingUpdate ? "Loading" : "Update"}
+                  btnType='orange'
+                />
+                <Button text='back' btnType='primary' href='/admin/products' />
               </div>
             </form>
           )}
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
 

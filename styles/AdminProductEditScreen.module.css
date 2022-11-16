@@ -1,0 +1,73 @@
+.content {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    color: var(--dark);
+}
+
+.title {
+    color: var(--dark);
+    text-transform: uppercase;
+    word-break: break-all;
+    width: 80%;
+}
+
+.leftNavOptions {
+    padding-left: 0;
+    list-style: none;
+}
+
+.activeLink {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}
+
+.menuLink{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.labelInputBox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.labelInputBox label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.labelInputBox input {
+    width: 60%;
+    resize: none;
+    padding: .5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--dark);
+    background-color: var(--light);
+    border: 1.5px solid var(--dark);
+    outline: none;
+}
+
+.btnContainer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .labelInputBox input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .btnContainer {
+        flex-direction: column;
+    }
+}
