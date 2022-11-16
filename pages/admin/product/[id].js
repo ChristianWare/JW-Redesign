@@ -203,7 +203,7 @@ export default function AdminProductEditScreen() {
                     required: "Please enter price",
                   })}
                 />
-                {errors.price.toLocaleString() && (
+                {errors.price && (
                   <div className='text-red-500'>{errors.price.message}</div>
                 )}
               </div>

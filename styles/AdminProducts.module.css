@@ -1,5 +1,6 @@
 .content {
     margin-top: 3rem;
+    margin-bottom: 5rem;
     color: var(--dark);
 }
 
@@ -28,9 +29,14 @@
     cursor: pointer;
 }
 
+.btnContainer {
+    margin-bottom: 2rem;
+}
+
 .table {
     border: 3px solid var(--orange);
     padding: 1rem;
+    width: 100%;
 }
 
 .table table {
@@ -48,6 +54,20 @@
     border: 1.5px solid var(--dark);
     margin-right: 1rem;
     padding: 1rem;
+}
+
+.edit {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: green;
+    cursor: pointer;
+}
+
+.delete {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
