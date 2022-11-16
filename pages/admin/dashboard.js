@@ -33,7 +33,6 @@ function AdminDashboardScreen() {
     summary: { salesData: [] },
     error: "",
   });
-  console.log(summary);
 
   useEffect(() => {
     const fetchData = async () => {

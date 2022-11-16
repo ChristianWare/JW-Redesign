@@ -93,7 +93,7 @@ const SlugPage = ({ product, similar }) => {
               ))}
             </div>
             <div className={styles.bottomBtns}>
-              <Button text='All Products' href='/products' />
+              <Button text='All Products' btnType="orange" iconColor="whiteIcon" href='/products' />
               <Button text='Home' href='/' />
             </div>
           </div>

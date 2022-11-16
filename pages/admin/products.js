@@ -119,11 +119,8 @@ export default function AdminProductsScreen() {
         </ul>
         <div>
           <div className='flex justify-between'>
-            <h1 className={styles.title}>Products</h1>
+            <h1 className={styles.title}>Products :({products.length})</h1>
             {loadingDelete && <div>Deleting Item</div>}
-            {/* <button disabled={loadingCreate} onClick={createHandler}>
-              {loadingCreate ? "Loading" : "Create"}
-            </button> */}
             <div className={styles.btnContainer}>
               <Button2
                 text={loadingCreate ? "Loading" : "Create"}
@@ -142,6 +139,7 @@ export default function AdminProductsScreen() {
                 <tr>
                   <th>ID</th>
                   <th>NAME</th>
+                  <th>LABEL</th>
                   <th>PRICE</th>
                   <th>COUNT</th>
                   <th>ACTIONS</th>
@@ -152,6 +150,7 @@ export default function AdminProductsScreen() {
                   <tr key={product._id} className='border-b'>
                     <td>{product._id.substring(20, 24)}</td>
                     <td>{product.name}</td>
+                    <td>{product.label}</td>
                     <td>{product.price}</td>
                     <td>{product.countInStock}</td>
                     <td>
