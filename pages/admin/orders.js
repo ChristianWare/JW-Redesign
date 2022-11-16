@@ -1,7 +1,9 @@
-import axios from 'axios'
+import axios from "axios";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
 import { getError } from "../../utils/error";
+import Layout from "../../components/layout/Layout";
+import styles from "../../styles/Orders.module.css";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -37,85 +39,75 @@ export default function AdminOrderScreen() {
   }, []);
 
   return (
-    <>
-      <div className='grid md:cols-4 md:gap-5'>
-        <div>
-          <ul>
-            <li>
-              <Link href='/admin/dashboard'>Dashboard</Link>
-            </li>
-            <li>
-              <Link href='/admin/orders'>
-                <a className='font-bold'>Orders</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/admin/products'>
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link href='/admin/users'>
-                Users
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className='overflow-x-auto md:col-span-3'>
-          <h1 className='mb-4 text-xl'>Admin Orders</h1>
-          {loading ? (
-            <div>Loading...</div>
-          ) : error ? (
-            <div className='alert-error'>{error}</div>
-          ) : (
-            <div className='overflow-x-auto'>
-              <table className='min-w-full'>
-                <thead className='border-b'>
-                  <tr>
-                    <th className='px-5 text-left'>ID</th>
-                    <th className='px-5 text-left'>USER</th>
-                    <th className='px-5 text-left'>DATE</th>
-                    <th className='px-5 text-left'>TOTAL</th>
-                    <th className='px-5 text-left'>PAID</th>
-                    <th className='px-5 text-left'>DELIVERED</th>
-                    <th className='px-5 text-left'>ACTION</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {orders.map((order) => (
-                    <tr key={order._id} className='border-b'>
-                      <td className='p-5'>{order._id.substring(20, 24)}</td>
-                      <td className='p-5'>
-                        {order.user ? order.user.name : "DELETED USER"}
-                      </td>
-                      <td className='p-5'>
-                        {order.createdAt.substring(0, 10)}
-                      </td>
-                      <td className='p-5'>${order.totalPrice}</td>
-                      <td className='p-5'>
-                        {order.isPaid
-                          ? `${order.paidAt.substring(0, 10)}`
-                          : "not paid"}
-                      </td>
-                      <td className='p-5'>
-                        {order.isDelivered
-                          ? `${order.deliveredAt.substring(0, 10)}`
-                          : "not delivered"}
-                      </td>
-                      <td className='p-5'>
-                        <Link href={`/order/${order._id}`} passHref>
-                          <a>Details</a>
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
+    <Layout title='Orders'>
+      <div className={styles.content}>
+        <ul className={styles.leftNavOptions}>
+          <li className={styles.menuLink}>
+            <Link href='/admin/dashboard'>
+              <a>Dashboard</a>
+            </Link>
+          </li>
+          <li className={styles.activeLink}>
+            <Link href='/admin/orders'>Orders</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/products'>Products</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/users'>Users</Link>
+          </li>
+        </ul>
       </div>
-    </>
+      <div>
+        <h1 className={styles.title}>Admin Orders</h1>
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div className='alert-error'>{error}</div>
+        ) : (
+          <div className={styles.table}>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>USER</th>
+                  <th>DATE</th>
+                  <th>TOTAL</th>
+                  <th>PAID</th>
+                  <th>DELIVERED</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map((order) => (
+                  <tr key={order._id}>
+                    <td>{order._id.substring(20, 24)}</td>
+                    <td>{order.user ? order.user.name : "DELETED USER"}</td>
+                    <td>{order.createdAt.substring(0, 10)}</td>
+                    <td>${order.totalPrice}</td>
+                    <td>
+                      {order.isPaid
+                        ? `${order.paidAt.substring(0, 10)}`
+                        : "not paid"}
+                    </td>
+                    <td>
+                      {order.isDelivered
+                        ? `${order.deliveredAt.substring(0, 10)}`
+                        : "not delivered"}
+                    </td>
+                    <td className='p-5'>
+                      <Link href={`/order/${order._id}`} passHref>
+                        <a>Details</a>
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </Layout>
   );
 }
 

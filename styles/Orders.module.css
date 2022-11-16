@@ -1,0 +1,63 @@
+.content {
+    margin-top: 3rem;
+    color: var(--dark);
+}
+
+.title {
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.leftNavOptions {
+    padding-left: 0;
+    list-style: none;
+}
+
+.activeLink {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}
+
+.menuLink{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.table {
+    border: 1.5px solid var(--dark);
+    padding: 1rem;
+}
+
+.table table {
+    padding: 1rem;
+    width: 100%;
+}
+
+.table th {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.table td {
+    border: 1.5px solid var(--dark);
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .table, .table table, .table th, .table td {
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .table, .table table, .table th, .table td {
+        padding: 0.1rem;
+    }
+}
