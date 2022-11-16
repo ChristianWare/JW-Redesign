@@ -89,28 +89,28 @@ function AdminDashboardScreen() {
               <div className={styles.infoItemGrid}>
                 <div className={styles.infoItem}>
                   <h4>${summary.ordersPrice}</h4>
-                  <h6>Sales</h6>
+                  <h6>(Sales)</h6>
                   <Link href='/admin/orders'>
                     <a className={styles.view}>View Sales</a>
                   </Link>
                 </div>
                 <div className={styles.infoItem}>
                   <h4>{summary.ordersCount}</h4>
-                  <h6>Orders</h6>
+                  <h6>(Orders)</h6>
                   <Link href='/admin/orders'>
                     <a className={styles.view}>View Orders</a>
                   </Link>
                 </div>
                 <div className={styles.infoItem}>
                   <h4>{summary.productsCount}</h4>
-                  <h6>Products</h6>
+                  <h6>(Products)</h6>
                   <Link href='/admin/products'>
                     <a className={styles.view}>View Products</a>
                   </Link>
                 </div>
                 <div className={styles.infoItem}>
                   <h4>{summary.usersCount}</h4>
-                  <h6>Users</h6>
+                  <h6>(Users)</h6>
                   <Link href='/admin/users'>
                     <a className={styles.view}>View Users</a>
                   </Link>
