@@ -43,7 +43,9 @@ const Layout = ({ children, title }) => {
         <header className={styles.navContainer}>
           <nav className={styles.navbar}>
             <div className={styles.navLeft}>
-              <Button text='JW' href='/' />
+              <div className={styles.btnContainer}>
+                <Button text='JW' href='/' />
+              </div>
             </div>
             <div className={styles.navRight}>
               <ul className={styles.navmenu}>

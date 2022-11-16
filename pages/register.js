@@ -8,7 +8,7 @@ import { getError } from "../utils/error";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import styles from "../styles/Register.module.css";
-import Button from "../components/button/Button";
+import Button2 from "../components/button2/Button2";
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -125,9 +125,8 @@ export default function LoginScreen() {
               )}
           </div>
           <div className={styles.btnContainer}>
-            <Button
+            <Button2
               text='Register'
-              href='/register'
               btnType='orange'
               iconColor='whiteIcon'
             />
