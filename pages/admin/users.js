@@ -102,7 +102,7 @@ function AdminUsersScreen() {
                   <th>NAME</th>
                   <th>EMAIL</th>
                   <th>ADMIN</th>
-                  <th>ACTIONS</th>
+                  {/* <th>ACTIONS</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -112,7 +112,7 @@ function AdminUsersScreen() {
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.isAdmin ? "YES" : "NO"}</td>
-                    <td>
+                    {/* <td>
                       <Link href={`/admin/user/${user._id}`} passHref>
                         <a className={styles.edit}>Edit</a>
                       </Link>
@@ -123,7 +123,7 @@ function AdminUsersScreen() {
                       >
                         Delete
                       </p>
-                    </td>
+                    </td> */}
                   </tr>
                 ))}
               </tbody>

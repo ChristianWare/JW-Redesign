@@ -28,7 +28,8 @@ export default function Products({ products }) {
     <Layout title='Products'>
       <PageIntro
         title='All of Johnnies Whiskies'
-        btnText='Shop All'
+        btnText='Home'
+        href='/'
         text='Here you will find a collection of all of our whiskies that we have to offer. Feel free to select a category above '
       />
       <div className={styles.content}>
@@ -45,7 +46,7 @@ export default function Products({ products }) {
       </div>
     </Layout>
   );
-};
+}
 
 export async function getServerSideProps() {
   await db.connect();
@@ -57,5 +58,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-

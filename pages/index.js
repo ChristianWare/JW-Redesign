@@ -34,7 +34,7 @@ export default function Home({ products, blue }) {
       <Nav2 />
       <h2 className={styles.title}>BEST SELLERS</h2>
       <div className={styles.itemsGrid}>
-        {products.slice(1, 5).map((product) => (
+        {products.slice(17, 21).map((product) => (
           <ProductItem
             key={product.slug}
             product={product}
@@ -57,7 +57,7 @@ export default function Home({ products, blue }) {
         ))}
       </div>
       <div className={styles.btnContainer}>
-        <Button text='See All' href='/products' />
+        <Button text='All Blue' href='/blue' />
       </div>
     </Layout>
   );
