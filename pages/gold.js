@@ -9,7 +9,7 @@ import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
 
-const goldPage = ({ gold }) => {
+const GoldPage = ({ gold }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -45,7 +45,7 @@ const goldPage = ({ gold }) => {
     </Layout>
   );
 };
-export default goldPage;
+export default GoldPage;
 
 export async function getServerSideProps() {
   await db.connect();

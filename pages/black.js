@@ -9,7 +9,7 @@ import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
 
-const blackPage = ({ black }) => {
+const BlackPage = ({ black }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -45,7 +45,7 @@ const blackPage = ({ black }) => {
     </Layout>
   );
 };
-export default blackPage;
+export default BlackPage;
 
 export async function getServerSideProps() {
   await db.connect();

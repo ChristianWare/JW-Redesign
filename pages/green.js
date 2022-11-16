@@ -10,7 +10,7 @@ import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
 import GreenLabel from "../components/green/GreenLabel";
 
-const greenPage = ({ green }) => {
+const GreenPage = ({ green }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -49,7 +49,7 @@ const greenPage = ({ green }) => {
     </Layout>
   );
 };
-export default greenPage;
+export default GreenPage;
 
 export async function getServerSideProps() {
   await db.connect();
