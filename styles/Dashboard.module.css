@@ -1,0 +1,51 @@
+.content {
+    margin-top: 3rem;
+    color: var(--dark);
+}
+
+.title {
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.leftNavOptions {
+    padding-left: 0;
+    list-style: none;
+}
+
+.activeLink {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}
+
+.menuLink{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+
+.infoItemGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border: 3px solid var(--orange);
+    padding: 1rem;
+}
+
+.infoItem {
+    border: 1.5px solid var(--dark);
+    padding: 1rem;
+}
+
+.view {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+}

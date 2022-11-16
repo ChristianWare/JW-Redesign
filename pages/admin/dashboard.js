@@ -2,6 +2,8 @@ import axios from "axios";
 import { useReducer, useEffect } from "react";
 import Link from "next/link";
 import { getError } from "../../utils/error";
+import Layout from "../../components/layout/Layout";
+import styles from "../../styles/Dashboard.module.css";
 
 export const option = {
   responsive: true,
@@ -31,6 +33,7 @@ function AdminDashboardScreen() {
     summary: { salesData: [] },
     error: "",
   });
+  console.log(summary);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,76 +60,67 @@ function AdminDashboardScreen() {
   };
 
   return (
-    <>
-      <>
-        <div className='grid md:grid-cols-4 md:gap-5'>
-          <div>
-            <ul>
-              <li>
-                <Link href='/admin/dashboard'>
-                  <a className='font-bold'>Dashboard</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/admin/orders'>
-                  Orders
-                </Link>
-              </li>
-              <li>
-                <Link href='/admin/products'>
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href='/admin/users'>
-                  Users
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className='md:col-span-3'>
-            <h1 className='mb-4 text-xl'>Admin Dashboard</h1>
-            {loading ? (
-              <div>Loading...</div>
-            ) : error ? (
-              <div className='alert-error'>{error}</div>
-            ) : (
-              <div>
-                <div className='grid grid-cols-1 md:grid-cols-4'>
-                  <div className='card m-5 p-5'>
-                    <p className='text-3xl'>${summary.ordersPrice}</p>
-                    <p>Sales</p>
-                    <Link href='/admin/orders'>View Sales</Link>
-                  </div>
-                  <div className='card m-5 p-5'>
-                    <p className='text-3xl'>{summary.ordersCount}</p>
-                    <p>Orders</p>
-                    <Link href='/admin/orders'>View Orders</Link>
-                  </div>
-                  <div className='card m-5 p-5'>
-                    <p className='text-3xl'>{summary.productsCount}</p>
-                    <p>Products</p>
-                    <Link href='/admin/products'>View Products</Link>
-                  </div>
-                  <div className='card m-5 p-5'>
-                    <p className='text-3xl'>{summary.usersCount}</p>
-                    <p>Users</p>
-                    <Link href='/admin/users'>View Users</Link>
-                  </div>
+    <Layout title='Admin Dashboard'>
+      <div className={styles.content}>
+        <ul className={styles.leftNavOptions}>
+          <li className={styles.activeLink}>
+            <Link href='/admin/dashboard'>
+              <a>Dashboard</a>
+            </Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/orders'>Orders</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/products'>Products</Link>
+          </li>
+          <li className={styles.menuLink}>
+            <Link href='/admin/users'>Users</Link>
+          </li>
+        </ul>
+        <div>
+          <h1 className={styles.title}>Admin Dashboard</h1>
+          {loading ? (
+            <div>Loading...</div>
+          ) : error ? (
+            <div className='alert-error'>{error}</div>
+          ) : (
+            <div>
+              <div className={styles.infoItemGrid}>
+                <div className={styles.infoItem}>
+                  <h4>${summary.ordersPrice}</h4>
+                  <h6>Sales</h6>
+                  <Link href='/admin/orders'>
+                    <a className={styles.view}>View Sales</a>
+                  </Link>
                 </div>
-                <h2 className="text-xl">Sales Report</h2>
-                {/* <Bar 
-                options={{
-                  legend: { display: true, position: 'right' }
-                }}
-                data={data}
-                 /> */}
+                <div className={styles.infoItem}>
+                  <h4>{summary.ordersCount}</h4>
+                  <h6>Orders</h6>
+                  <Link href='/admin/orders'>
+                    <a className={styles.view}>View Orders</a>
+                  </Link>
+                </div>
+                <div className={styles.infoItem}>
+                  <h4>{summary.productsCount}</h4>
+                  <h6>Products</h6>
+                  <Link href='/admin/products'>
+                    <a className={styles.view}>View Products</a>
+                  </Link>
+                </div>
+                <div className={styles.infoItem}>
+                  <h4>{summary.usersCount}</h4>
+                  <h6>Users</h6>
+                  <Link href='/admin/users'>
+                    <a className={styles.view}>View Users</a>
+                  </Link>
+                </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
-      </>
-    </>
+      </div>
+    </Layout>
   );
 }
 

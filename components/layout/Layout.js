@@ -93,7 +93,7 @@ const Layout = ({ children, title }) => {
                           href='/order-history'
                         />
                         {session.user.isAdmin && (
-                          <DropdownItem text='Admin Dashboard' href='/' />
+                          <DropdownItem text='Admin Dashboard' href='/admin/dashboard' />
                         )}
                         <DropdownItem text='Profile' href='/profile' />
                         <DropdownItem
