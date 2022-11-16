@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import Redlabel from "../components/red/RedLabel";
 
 const redPage = ({ red }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,6 +28,9 @@ const redPage = ({ red }) => {
   };
   return (
     <Layout title='Red'>
+      <div className={styles.labelContainer}>
+        <Redlabel />
+      </div>
       <PageIntro
         title='The Greatness of Red'
         text='Flowers that bloom into flames. Johnnie Walker Red Label is the world’s best-selling Scotch Whisky. And is made for mixing, both in exhilarating cocktails and with your favorite people. It brings together whiskies specially chosen for their bold, vibrant flavors that add a fiery kick to any mix.'
