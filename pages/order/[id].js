@@ -258,7 +258,7 @@ function OrderScreen() {
               </div>
             </div>
             <div className={styles.right}>
-              <div className={styles.detailsContainer}>
+              <div999 className={styles.detailsContainer}>
                 <div className={styles.details}>
                   <h5 className={styles.orderSummary}>Order Summary</h5>
                   <ul>
@@ -303,7 +303,19 @@ function OrderScreen() {
                     </>
                   )}
                 </div>
-              </div>
+                <div className={styles.sampleCC}>
+                  <h6>Sample CC Info</h6>
+                  <p>
+                    <span>Card #:</span>4032032607519649
+                  </p>
+                  <p>
+                    <span>Exp. Date:</span>01/2023
+                  </p>
+                  <p>
+                    <span>CVV:</span>834
+                  </p>
+                </div>
+              </div999>
             </div>
           </div>
         </div>
