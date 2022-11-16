@@ -57,7 +57,7 @@ const SlugPage = ({ product, similar }) => {
               <div className={styles.headingTextContainer}>
                 <h3>${product.price.toLocaleString()}</h3>
                 <div className={styles.btnContainer}>
-                  <Button2 text='Add To Cart' onClick={addToCartHandler} />
+                  <Button2 text='Add To Cart' btnType="orange" onClick={addToCartHandler} />
                 </div>
               </div>
               <div className={styles.headingTextContainer}>

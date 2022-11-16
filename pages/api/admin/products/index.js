@@ -21,15 +21,15 @@ const postHandler = async (req, res) => {
   await db.connect();
   const newProduct = new Product({
     name: "sample name",
-    slug: "smaple-name" + Math.random(),
+    slug: "sample-name" + Math.random(),
+    label: "sample label",
     image: "/images.shirt1.jpg",
     price: 0,
-    category: "sample category",
-    brand: "smaple brand",
+    abv: 0,
+    size: "sample size",
     countInStock: 0,
     description: "sample description",
-    rating: 0,
-    numReviews: 0,
+    taste: "sample taste",
   });
 
   const product = await newProduct.save();

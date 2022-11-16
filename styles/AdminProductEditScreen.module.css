@@ -42,7 +42,7 @@
     font-weight: bold;
 }
 
-.labelInputBox input {
+.labelInputBox input, .labelInputBox textarea {
     width: 60%;
     resize: none;
     padding: .5rem;

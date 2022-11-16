@@ -65,12 +65,16 @@ export default function AdminProductEditScreen() {
         dispatch({ type: "FETCH_SUCCESS" });
         setValue("name", data.name);
         setValue("slug", data.slug);
-        setValue("price", data.price);
+        setValue("label", data.label);
         setValue("image", data.image);
+        setValue("price", data.price);
+        setValue("abv", data.abv);
+        setValue("size", data.size);
         // setValue("category", data.category);
         // setValue("brand", data.brand);
         setValue("countInStock", data.countInStock);
         setValue("description", data.description);
+        setValue("taste", data.taste);
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: getError(err) });
       }
@@ -107,24 +111,32 @@ export default function AdminProductEditScreen() {
   const submitHandler = async ({
     name,
     slug,
-    price,
-    // category,
+    label,
     image,
+    price,
+    abv,
+    size,
+    // category,
     // brand,
     countInStock,
     description,
+    taste,
   }) => {
     try {
       dispatch({ type: "UPDATE_REQUEST" });
       await axios.put(`/api/admin/products/${productId}`, {
         name,
         slug,
-        price,
-        // category,
+        label,
         image,
+        price,
+        abv,
+        size,
+        // category,
         // brand,
         countInStock,
         description,
+        taste,
       });
       dispatch({ type: "UPDATE_SUCCESS" });
       toast.success("Product updated successfully");
@@ -190,12 +202,12 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className={styles.labelInputBox}>
-                <label htmlFor='price'>Price</label>
+                <label htmlFor='label'>Label</label>
                 <input
                   type='text'
-                  id='price'
-                  {...register("price", {
-                    required: "Please enter price",
+                  id='label'
+                  {...register("label", {
+                    required: "Please enter label",
                   })}
                 />
                 {errors.price && (
@@ -220,32 +232,45 @@ export default function AdminProductEditScreen() {
                 <input type='file' id='imageFile' onChange={uploadHandler} />
                 {loadingUpload && <div>Uploading...</div>}
               </div>
-              {/* <div className={styles.labelInputBox}>
-                <label htmlFor='category'>Category</label>
+              <div className={styles.labelInputBox}>
+                <label htmlFor='price'>Price</label>
                 <input
                   type='text'
-                  id='category'
-                  {...register("category", {
-                    required: "Please enter category",
+                  id='price'
+                  {...register("price", {
+                    required: "Please enter price",
                   })}
                 />
-                {errors.category && (
-                  <div className='text-red-500'>{errors.category.message}</div>
+                {errors.price && (
+                  <div className='text-red-500'>{errors.price.message}</div>
                 )}
-              </div> */}
-              {/* <div className={styles.labelInputBox}>
-                <label htmlFor='brand'>Brand</label>
+              </div>
+              <div className={styles.labelInputBox}>
+                <label htmlFor='abv'>ABV</label>
                 <input
                   type='text'
-                  id='brand'
-                  {...register("brand", {
-                    required: "Please enter brand",
+                  id='abv'
+                  {...register("abv", {
+                    required: "Please enter abv",
                   })}
                 />
-                {errors.brand && (
-                  <div className='text-red-500'>{errors.brand.message}</div>
+                {errors.price && (
+                  <div className='text-red-500'>{errors.price.message}</div>
                 )}
-              </div> */}
+              </div>
+              <div className={styles.labelInputBox}>
+                <label htmlFor='size'>Size</label>
+                <input
+                  type='text'
+                  id='size'
+                  {...register("size", {
+                    required: "Please enter size",
+                  })}
+                />
+                {errors.price && (
+                  <div className='text-red-500'>{errors.price.message}</div>
+                )}
+              </div>
               <div className={styles.labelInputBox}>
                 <label htmlFor='countInStock'>Count In Stock</label>
                 <input
@@ -263,17 +288,39 @@ export default function AdminProductEditScreen() {
               </div>
               <div className={styles.labelInputBox}>
                 <label htmlFor='description'>Description</label>
-                <input
+                <textarea
+                  id='description'
+                  {...register("description", {
+                    required: "Please enter description",
+                  })}
+                  name='description'
+                  rows='4'
+                  cols='50'
+                />
+                {/* <input
                   type='text'
                   id='description'
                   {...register("description", {
                     required: "Please enter description",
                   })}
-                />
+                /> */}
                 {errors.description && (
                   <div className='text-red-500'>
                     {errors.description.message}
                   </div>
+                )}
+              </div>
+              <div className={styles.labelInputBox}>
+                <label htmlFor='taste'>Taste</label>
+                <input
+                  type='text'
+                  id='taste'
+                  {...register("taste", {
+                    required: "Please enter taste",
+                  })}
+                />
+                {errors.image && (
+                  <div className='text-red-500'>{errors.image.message}</div>
                 )}
               </div>
               <div className={styles.btnContainer}>
