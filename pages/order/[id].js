@@ -3,12 +3,13 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import  { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useEffect, useReducer } from "react";
 import { toast } from "react-toastify";
 import Layout from "../../components/layout/Layout";
 import { getError } from "../../utils/error";
 import styles from "../../styles/OrderScreen.module.css";
+import Button2 from "../../components/button2/Button2";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -146,7 +147,7 @@ function OrderScreen() {
         );
         dispatch({ type: "PAY_SUCCESS", payload: data });
         toast.success("Order is paid successgully");
-        router.push('/thankyou');
+        router.push("/thankyou");
       } catch (err) {
         dispatch({ type: "PAY_FAIL", payload: getError(err) });
         toast.error(getError(err));
@@ -192,7 +193,9 @@ function OrderScreen() {
                     {shippingAddress.country}
                   </div>
                   {isDelivered ? (
-                    <p className={styles.delivered}>Delivered at {deliveredAt}</p>
+                    <p className={styles.delivered}>
+                      Delivered at {deliveredAt}
+                    </p>
                   ) : (
                     <p className={styles.notDelivered}>Not delivered</p>
                   )}
@@ -238,7 +241,7 @@ function OrderScreen() {
                             </Link>
                           </td>
                           <td>{item.quantity}</td>
-                          <td>${item.price}</td>
+                          <td>${item.price.toLocaleString()}</td>
                           <td>${item.quantity * item.price}</td>
                         </tr>
                       ))}
@@ -282,12 +285,15 @@ function OrderScreen() {
                     </div>
                   )}
                   {session.user.isAdmin && order.isPaid && !order.isDelivered && (
-                    <li>
+                    <>
                       {loadingDeliver && <div>Loading...</div>}
-                      <button onClick={deliverOrderHandler}>
-                        Deliver Order
-                      </button>
-                    </li>
+                      <Button2
+                        onClick={deliverOrderHandler}
+                        text='Deliver Order'
+                        btnType='orange'
+                        fullWidth='yes'
+                      />
+                    </>
                   )}
                 </div>
               </div>

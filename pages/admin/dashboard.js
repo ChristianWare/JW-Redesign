@@ -88,7 +88,7 @@ function AdminDashboardScreen() {
             <div>
               <div className={styles.infoItemGrid}>
                 <div className={styles.infoItem}>
-                  <h4>${summary.ordersPrice}</h4>
+                  <h4>${summary.ordersPrice.toLocaleString()}</h4>
                   <h6>(Sales)</h6>
                   <Link href='/admin/orders'>
                     <a className={styles.view}>View Sales</a>

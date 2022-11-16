@@ -125,7 +125,7 @@ export default function PlaceOrderScreen() {
                       </div>
                       <div className={styles.box}>
                         <h6 className={styles.heading}>Price</h6>
-                        <p>{item.price}</p>
+                        <p>{item.price.toLocaleString()}</p>
                       </div>
                     </div>
                   ))}
@@ -156,7 +156,12 @@ export default function PlaceOrderScreen() {
                     </li>
                   </ul>
                 </div>
-                <Button2 text="Place Order" btnType="orange" iconColor="whiteIcon" onClick={placeOrderHandler}>
+                <Button2
+                  text='Place Order'
+                  btnType='orange'
+                  iconColor='whiteIcon'
+                  onClick={placeOrderHandler}
+                >
                   {loading ? "Loading..." : "Place order"}
                 </Button2>
               </div>

@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import styles from "../styles/Cart.module.css";
 import Button2 from "../components/button2/Button2";
 import Layout from "../components/layout/Layout";
+import Delete from '../public/icons/x.svg'
 
 function CartPage() {
   const router = useRouter();
@@ -73,15 +74,18 @@ function CartPage() {
                           </option>
                         ))}
                       </select>
-                        <h6 className={styles.removeHeading}>Remove</h6>
-                        <button className={styles.remove} onClick={() => removeItemHandler(item)}>
-                          x
-                        </button>
+                      <h6 className={styles.removeHeading}>Remove</h6>
+                      <button
+                        className={styles.remove}
+                        onClick={() => removeItemHandler(item)}
+                      >
+                        <Delete className={styles.deleteBtn} />
+                      </button>
                     </div>
                   </div>
                   <div className={styles.box}>
                     <h6 className={styles.heading}>Price</h6>
-                    <p>{item.price}</p>
+                    <p>{item.price.toLocaleString()}</p>
                   </div>
                 </div>
               ))}
@@ -92,12 +96,14 @@ function CartPage() {
           <div className={styles.subtotalCheckoutContainer}>
             <h5>
               Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
-              {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
+              {cartItems
+                .reduce((a, c) => a + c.quantity * c.price, 0)
+                .toLocaleString()}
             </h5>
             <Button2
               text='Check Out'
               iconColor='whiteIcon'
-              btnType="orange"
+              btnType='orange'
               onClick={() => router.push("login?redirect=/shipping")}
             />
           </div>

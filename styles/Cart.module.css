@@ -27,6 +27,8 @@
     margin-bottom: 3rem;
 }
 
+
+
 .itemsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -48,6 +50,12 @@
 .box {
     border: 1.5px solid var(--dark);
     padding: 1rem;
+}
+
+.deleteBtn {
+    color: var(--dark);
+    font-size: 2rem;
+    margin-left: 2rem;
 }
 
 .select select {

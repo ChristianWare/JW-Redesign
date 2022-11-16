@@ -60,14 +60,12 @@
     font-weight: bold;
     text-transform: uppercase;
     color: green;
-    cursor: pointer;
 }
 
 .notDelivered {
     font-weight: bold;
     text-transform: uppercase;
     color: red;
-    cursor: pointer;
     padding: 0.5rem;
 }
 

@@ -23,13 +23,13 @@ const ProductItem = ({ product, addToCartHandler, imgContainer='small' }) => {
           />
         </div>
         <p>Label: {product.label.toUpperCase()}</p>
-        <p>${product.price}</p>
+        <p>${product.price.toLocaleString()}</p>
         <div className={styles.btnContainer}>
           <Button text='More Details' href={`/products/${product.slug}`} />
           <Button2
             text='Add to Cart'
-            btnType="primary"
-            iconColor="darkIcon"
+            btnType='primary'
+            iconColor='darkIcon'
             onClick={() => addToCartHandler(product)}
           />
         </div>

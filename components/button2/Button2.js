@@ -6,9 +6,13 @@ const Button2 = ({
   onClick,
   btnType = "primary",
   iconColor = "whiteIcon",
+  fullWidth='no',
 }) => {
   return (
-    <button className={styles[btnType]} onClick={onClick}>
+    <button
+      className={styles[btnType] + " " + styles[fullWidth]}
+      onClick={onClick}
+    >
       {text} <Arrow className={styles[iconColor]} />
     </button>
   );

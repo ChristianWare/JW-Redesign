@@ -16,6 +16,11 @@
     user-select: none;
     background-color: var(--light);
     border: solid 1.5px var(--dark);
+    
+}
+
+.yes {
+    width: 100%;
 }
 
 .orange {
