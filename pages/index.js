@@ -68,7 +68,7 @@ export default function Home({ products, blue, green }) {
           href='/blue'
         />
       </div>
-      <h2 className={styles.title}>GREEN GUYS</h2>
+      <h2 className={styles.title}>GREEN GREATNESS</h2>
       <div className={styles.itemsGrid}>
         {green.map((product) => (
           <ProductItem

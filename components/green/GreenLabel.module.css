@@ -2,6 +2,16 @@
     color: var(--color8);
     background-color: var(--color5);
     padding: 1rem;
+    border: 5px solid var(--color5);
+}
+
+.hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    border: 5px solid var(--orange);
 }
 
 .border {
@@ -75,6 +85,8 @@
     font-size: 3rem;
     color: var(--color8);
     text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
 

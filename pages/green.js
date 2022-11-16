@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import GreenLabel from "../components/green/GreenLabel";
 
 const greenPage = ({ green }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,6 +28,9 @@ const greenPage = ({ green }) => {
   };
   return (
     <Layout title='Green'>
+      <div className={styles.labelContainer}>
+        <GreenLabel />
+      </div>
       <PageIntro
         title='The Greatness of Green'
         text='Our only Scotch blended entirely with single malts. Johnnie Walker Green Label is a hidden gem with vibrant secrets to reveal. And with malts from the four corners of Scotland, aged for at least 15 years, it captures the distinct flavors of each landscape in perfect balance. A whisky that’s in harmony with nature.'

@@ -1,11 +1,27 @@
 import styles from "./GreenLabel.module.css";
 import Image from "next/image";
 import JW from "../../public/icons/jw.png";
-import Button from "../button/Button";
+import { useRouter } from "next/router";
 
 const GreenLabel = () => {
+const router = useRouter();
+
+const onClick = () => {
+  if (router.pathname === "/") {
+    router.push("/green");
+  }
+  return;
+};
+
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        router.pathname === "/"
+          ? styles.container + " " + styles.hover
+          : styles.container
+      }
+      onClick={onClick}
+    >
       <div className={styles.border}>
         <div className={styles.left}>
           <div className={styles.textContainer}>
@@ -17,16 +33,6 @@ const GreenLabel = () => {
               <Image src={JW} width='50' height='83' alt='image' />
             </div>
             <h3 className={styles.scriptText}>Blended Malt Scotch Whiskey</h3>
-          </div>
-        </div>
-        <div className={styles.right}>
-          <div className={styles.btnContainer}>
-            <Button
-              text='Shop Green Label'
-              btnType='green'
-              iconColor='whiteIcon'
-              href='/green'
-            />
           </div>
         </div>
       </div>
