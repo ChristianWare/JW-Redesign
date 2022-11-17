@@ -10,7 +10,7 @@ function Button({
   onClick,
 }) {
   return (
-    <Link href={href} legacyBehavior onClick={onClick}>
+    <Link href={href} onClick={onClick}>
       <a className={styles.container}>
         <button className={styles[btnType]}>
           {text} <Arrow className={styles[iconColor]} />

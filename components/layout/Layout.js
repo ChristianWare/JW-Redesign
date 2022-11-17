@@ -50,12 +50,12 @@ const Layout = ({ children, title }) => {
             <div className={styles.navRight}>
               <ul className={styles.navmenu}>
                 <li className={styles.navItem}>
-                  <Link href='/products' passHref legacyBehavior>
+                  <Link href='/products' passHref>
                     <a title='Contact Page'>Catalog</a>
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='/cart' passHref legacyBehavior>
+                  <Link href='/cart' passHref>
                     <a title='Contact Page'>
                       {cartItemsCount > 0 ? (
                         <span className={styles.cartCount}>

@@ -1,5 +1,11 @@
 .container {
     border: 1.5px solid var(--dark);
+    cursor: pointer;
+}
+
+.container:hover {
+    border-color: var(--orange);
+    transition: all 0.2s eas;
 }
 
 .content {

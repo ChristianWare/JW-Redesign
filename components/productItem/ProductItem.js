@@ -3,12 +3,18 @@ import Image from "next/image";
 import Button from "../button/Button";
 import Link from "next/link";
 import Button2 from "../button2/Button2";
+import { useRouter } from "next/router";
 
-const ProductItem = ({ product, addToCartHandler, imgContainer='small' }) => {
+const ProductItem = ({ product, addToCartHandler, imgContainer = "small" }) => {
+  const router = useRouter();
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={() => router.push(`/products/${product.slug}`)}
+    >
       <div className={styles.content}>
-        <Link href={`/products/${product.slug}`} passHref legacyBehavior>
+        <Link href={`/products/${product.slug}`} passHref>
           <a className={styles.name}>{product.name}</a>
         </Link>
         <p>{product.size}</p>

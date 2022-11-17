@@ -17,17 +17,17 @@ const Nav = () => {
         <div className={styles.navRight}>
           <ul className={styles.navmenu}>
             <li className={styles.navItem}>
-              <Link href='/products' passHref legacyBehavior>
+              <Link href='/products' passHref>
                 <a title='Contact Page'>Catalog</a>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href='/cart' passHref legacyBehavior>
+              <Link href='/cart' passHref>
                 <a title='Contact Page'>Cart</a>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href='/login' passHref legacyBehavior>
+              <Link href='/login' passHref>
                 <a title='Contact Page'>Login</a>
               </Link>
             </li>
