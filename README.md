@@ -6,9 +6,6 @@ Johinne Walks is an e-commerce store, inspired by the current Johnnie Walker web
 
 ###### Images
 
-Home
-![Home Page](https://johnniewalks.com/images/s4.png)
-
 Item Details
 ![Item Details](https://johnniewalks.com/images/s1.png)
 
