@@ -73,8 +73,6 @@ Some of the Vercel/Next.js features used on this site:
 - getServerSideProps ( ) - I used this because I wanted each page to be pre-rendered on each request from the server. I
 - params - the slug pages utilizes a dynamic route, so the route parameters are stored in params, which is actually coming from "context". So access them, I had to use params. My slug page’s name was set to [slug].js, the parameters will be { slug: … }. Here is an example:
 
-First, run the development server:
-
 ```bash
 export async function getServerSideProps(context) {
   const { params } = context;
