@@ -11,7 +11,7 @@
 }
 
 .hover:hover {
-    border: 5px solid var(--color1);
+    border: 5px solid var(--orange);
 }
 
 .border {

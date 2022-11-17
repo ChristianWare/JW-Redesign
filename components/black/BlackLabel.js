@@ -8,7 +8,7 @@ const BlackLabel = () => {
 
   const onClick = () => {
     if (router.pathname === "/") {
-      router.push("/red");
+      router.push("/black");
     }
     return;
   };

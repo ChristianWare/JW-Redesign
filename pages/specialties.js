@@ -28,7 +28,7 @@ const SpecialtiesPage = ({ specialties }) => {
   return (
     <Layout title='specialties'>
       <PageIntro
-        title='The Greatness of specialties'
+        title="Johnnie's Great Specialties"
         text='Infinitely collectable. The perfect gifts for whisky fans. These Johnnie Walker limited edition blends are only available for a short time. Discover exclusive bottle designs, gift sets and limited release blends for extra special moments.'
         btnText='Catalog'
         href='/products'
