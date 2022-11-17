@@ -95,7 +95,7 @@ const Layout = ({ children, title }) => {
                         {session.user.isAdmin && (
                           <DropdownItem text='Admin Dashboard' href='/admin/dashboard' />
                         )}
-                        <DropdownItem text='Profile' href='/profile' />
+                        {/* <DropdownItem text='Profile' href='/profile' /> */}
                         <DropdownItem
                           text='Logout'
                           href='/'

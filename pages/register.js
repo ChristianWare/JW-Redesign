@@ -18,7 +18,10 @@ export default function LoginScreen() {
 
   useEffect(() => {
     if (session?.user) {
-      router.push(redirect || "/");
+      toast.success("Account created successfully");
+      setTimeout(() => {
+        router.push(redirect || "/");
+      }, 5000);
     }
   }, [router, session, redirect]);
 
@@ -125,11 +128,7 @@ export default function LoginScreen() {
               )}
           </div>
           <div className={styles.btnContainer}>
-            <Button2
-              text='Register'
-              btnType='orange'
-              iconColor='whiteIcon'
-            />
+            <Button2 text='Register' btnType='orange' iconColor='whiteIcon' />
           </div>
           <div className={styles.loginBtn}>
             Already have an account? &nbsp;
