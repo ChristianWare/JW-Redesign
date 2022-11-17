@@ -1,6 +1,7 @@
 import BlueLabel from "../blue/BlueLabel";
 import GreenLabel from "../green/GreenLabel";
 import Redlabel from "../red/RedLabel";
+import BlackLabel from '../black/BlackLabel'
 
 export const SlideData = [
   {
@@ -11,5 +12,8 @@ export const SlideData = [
   },
   {
     slideComp: <GreenLabel />,
+  },
+  {
+    slideComp: <BlackLabel />,
   },
 ];
