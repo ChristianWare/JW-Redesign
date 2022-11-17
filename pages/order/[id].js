@@ -262,7 +262,7 @@ function OrderScreen() {
               <div999 className={styles.detailsContainer}>
                 <div className={styles.details}>
                   <h5 className={styles.orderSummary}>
-                    {isDelivered ? "Order Summary" : "Please Pay"}
+                    {isPaid ? "Order Summary" : "Please Pay"}
                   </h5>
                   <ul>
                     <li className={styles.liFlex}>
