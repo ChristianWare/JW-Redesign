@@ -1,0 +1,97 @@
+.container {
+    color: var(--color4);
+    background-color: var(--dark2);
+    padding: 1rem;
+    border: 5px solid var(--dark);
+}
+
+.hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    border: 5px solid var(--color1);
+}
+
+.border {
+    width: 100%;
+    border: 7px double var(--color8);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    place-items: center;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jw {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.rl {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 8rem;
+    letter-spacing: .1rem;
+    color: var(--light);
+    text-shadow: 5px 4px #7a663a;
+    text-align: center;
+}
+
+.lowerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    position: relative;
+    width: 50px;
+}
+
+.scriptText {
+    font-family: 'birds';
+    font-size: 3rem;
+    color: var(--color8);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 100%;
+}
+
+.walker {
+    width: 50px;
+}
+
+
+.btnContainer {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .border {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .right {
+        padding: 2rem
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .right {
+        padding: 1rem
+    }
+}

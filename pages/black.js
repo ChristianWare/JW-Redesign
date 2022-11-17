@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import BlackLabel from "../components/black/BlackLabel";
 
 const BlackPage = ({ black }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,6 +28,9 @@ const BlackPage = ({ black }) => {
   };
   return (
     <Layout title='black'>
+      <div className={styles.labelContainer}>
+        <BlackLabel />
+      </div>
       <PageIntro
         title='The Greatness of Black'
         text='The original Walker family blend, handcrafted from as many as 40 of the finest Scotch whiskies aged a minimum of 12 years, for a smooth and robust blend. Rich smoky malt, peat and sherry fruit character deliver a satisfyingly complex flavor on the long, lingering finish.'
