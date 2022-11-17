@@ -85,7 +85,7 @@ export default function Home({ products, blue, green }) {
           iconColor='whiteIcon'
           href='/green'
         />
-      </div>
+      </div> 
     </Layout>
   );
 }
