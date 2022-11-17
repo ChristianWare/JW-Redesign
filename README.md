@@ -1,16 +1,13 @@
 # Johnnie Walker E-Commerce Redesign
 
-<!-- First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-``` -->
-
 ## Project Description
 
 JW is an ecommerce store, inspired by the current Johnnie Walker website. It showcases the differnt labels that Johnnie Walker currently has to offer, including the popular Blue, Red, and Green labels.
+
+###### Images
+
+Home Page
+![Home Page](https://johnniewalks.com/images/s4.png)
 
 #### User Functionalities
 
