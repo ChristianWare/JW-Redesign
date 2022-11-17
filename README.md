@@ -34,13 +34,13 @@ Here is what the Admin Dashboard looks like:
 
 1. Think of concept and execution, sketch out ideas on paper.
 1. Get design inspiration from existing e-commerce sites. Use Dribbble and Behance as references.
-1. Build the Front End with some sample products.
 1. Set up Design system in global styles sheet.
 1. Add needed Fonts, Images and SVG icons.
+1. Build the Front End with some sample products.
 1. Setup Mongo Atlas Database and connect to application.
 1. Download necessary NMP dependencies
 1. Build backend API Routes
-1. Create CRUD functionalities to build new products, delete sample data.
+1. Create CRUD (create, read, update, delete) functionalities to build new products, delete sample data.
 1. Build application to completion
 1. Deploy application to vercel
 
