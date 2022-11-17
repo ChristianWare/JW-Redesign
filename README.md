@@ -4,7 +4,7 @@
 
 Johinne Walks is an e-commerce store, inspired by the current Johnnie Walker website. It showcases the different labels that Johnnie Walker currently has to offer, including the popular Blue, Red, and Green labels.
 
-###### Images
+## Images
 
 Item Details
 ![Item Details](https://johnniewalks.com/images/s1.png)
@@ -12,11 +12,11 @@ Item Details
 Order Details
 ![Order Details Page](https://johnniewalks.com/images/s2.png)
 
-#### User Functionalities
+## User Functionalities
 
 Users can browse any authorized page to make purchases with Paypal, or a sample Debit Card provided by the site. They can edit their profile, and view their order history. The Order History screen allows you to see the payment and shipping status of each purchase made. And Account is needed in order to place an order. If Users are not logged in by the time they reach the shipping page during the ordering process, the are automatically rerouted to the login page, where they can log in or register for a new account.
 
-#### Amin Functionalities
+## Amin Functionalities
 
 In addition to user functionalities, the Administrator has access to the Admin Dashboard. Here they can see the total number of sales made, orders placed, products sold, and users enrolled. They also have access to the orders, products, and users screens:
 
@@ -48,15 +48,15 @@ Here is what the Admin Dashboard looks like:
 
 The tech Stack used for this project was MERN. (MongoDB, Express, React, Node). Next.js was used for the Front End. I chose to build the app using the MERN stack since it's entirely based on JavaScript. So I am only using one programing language, in opposed to bringing in another server side language, like Python.
 
-###### Next.js
+## Next.js
 
 I chose to use Next.js because of it's Server Side Rendering (SSR) capabilities. In a traditional React app, a large bundle of JavaScript is sent to the client and is rendered once it has loaded. Next.js's SSR will render a frontend application on the server. The main benefit of this is for Search Engine Optimization (SEO).
 
-###### MongoDB
+## MongoDB
 
 I used MongoDB as the database since it is easy to create and store unstructured data, by creating a schema for a product, user, or an order. I stored my Mongo credentials in a ".env" file so that my API keys aren't exposed on the Front End. When it was time to deploy, I simply input those API keys in environment variables on Vercel’s hosting platform. I used mongoose for my ORM so that I would be able to easily access the data from MongoDB.
 
-###### Node.js
+## Node.js
 
 Node was used to handle all of the /api routes, which already comes out of the box with Next.js. So there was no need to build a separate node backend.
 
@@ -91,7 +91,7 @@ export async function getServerSideProps(context) {
 }
 ```
 
-###### Advantages of getServerSideProps( )
+## Advantages of getServerSideProps( )
 
 Using GetServerSideProps anyone to improve their SEO, since the data is rendered before it reaches the client.
 
