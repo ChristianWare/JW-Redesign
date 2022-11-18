@@ -15,11 +15,28 @@
     margin-top: 1rem;
 }
 
-.topLeft h1 {
+.title {
     text-transform: uppercase;
     line-height: 120%;
     color: var(--dark);
+    position: relative;
 }
+
+/* .title span {
+    color: var(--orange);
+}
+
+.title span:after {
+    position: absolute;
+    content: 'GREATNESS';
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--dark);
+    top: 78px;
+    left: 10px;
+    z-index: -10;
+} */
+
 
 .topRight {
     border: 1.5px solid var(--dark);
