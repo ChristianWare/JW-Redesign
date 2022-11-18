@@ -13,7 +13,6 @@ import Button2 from "../../components/button2/Button2";
 import Layout from "../../components/layout/Layout";
 
 const SlugPage = ({ product, similar }) => {
-  // const { product } = props;
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
     if (!product) {
