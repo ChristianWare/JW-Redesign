@@ -99,7 +99,6 @@ const Layout = ({ children, title }) => {
                             href='/admin/dashboard'
                           />
                         )}
-                        {/* <DropdownItem text='Profile' href='/profile' /> */}
                         <DropdownItem
                           text='Logout'
                           href='/'
@@ -121,7 +120,7 @@ const Layout = ({ children, title }) => {
         </header>
         {router.pathname !== "/" && <Nav2 />}
         <div>{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

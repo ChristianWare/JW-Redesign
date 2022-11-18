@@ -83,7 +83,6 @@ export default function LoginScreen() {
           </div>
           <div className={styles.btnContainer}>
             <Button2 text='Login' btnType='orange' />
-            {/* <Button text='Register' btnType='orange' iconColor='whiteIcon' href='/register' /> */}
           </div>
           <div className={styles.loginBtn}>
             Don&apos;t have an account? &nbsp;
