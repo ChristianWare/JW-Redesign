@@ -1,0 +1,118 @@
+.container {
+    color: var(--color4);
+    background-color: var(--orange);
+    padding: 1rem;
+    border: 5px solid var(--orange);
+}
+
+.hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    border: 5px solid var(--dark);
+}
+
+.border {
+    width: 100%;
+    border: 7px double var(--color1);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    place-items: center;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jw {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.rl {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 8rem;
+    letter-spacing: .1rem;
+    color: var(--light);
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.rl:after {
+    position: absolute;
+    content: 'LIMITED EDITION';
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--dark);
+    white-space: nowrap;
+    top: 10px;
+    left: 12px;
+    z-index: -1;
+}
+
+
+
+.lowerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    position: relative;
+    width: 50px;
+}
+
+.scriptText {
+    font-family: 'birds';
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 100%;
+}
+
+.walker {
+    width: 50px;
+}
+
+
+.btnContainer {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .border {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .right {
+        padding: 2rem
+    }
+}
+
+@media screen and (max-width: 689px) {
+    .rl:after {
+    white-space:normal;
+}
+
+}
+
+@media screen and (max-width: 868px) {
+    .right {
+        padding: 1rem
+    }
+}

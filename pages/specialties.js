@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import Limited from "../components/limited/Limited";
 
 const SpecialtiesPage = ({ specialties }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,8 +28,11 @@ const SpecialtiesPage = ({ specialties }) => {
   };
   return (
     <Layout title='specialties'>
+      <div className={styles.labelContainer}>
+        <Limited />
+      </div>
       <PageIntro
-        title="Johnnie's Great Specialties"
+        title="Johnnie's Limited Editions"
         text='Infinitely collectable. The perfect gifts for whisky fans. These Johnnie Walker limited edition blends are only available for a short time. Discover exclusive bottle designs, gift sets and limited release blends for extra special moments.'
         btnText='Catalog'
         href='/products'

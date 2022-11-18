@@ -12,9 +12,7 @@ const Nav2 = () => {
         <Button text='green' href='/green' />
         <Button text='black' href='/black' />
         <Button text='gold' href='/gold' />
-        
-       
-        <Button text='specialties' href='/specialties' />
+        <Button text='ltd. edition' href='/specialties' />
       </div>
     </nav>
   );
