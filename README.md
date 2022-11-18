@@ -71,7 +71,7 @@ In addition to its simplicity, you may want to consider using Vercel to host Nex
 Some of the Vercel/Next.js features used on this site:
 
 - getServerSideProps ( ) - I used this because I wanted each page to be pre-rendered on each request from the server. I
-- params - the slug pages utilizes a dynamic route, so the route parameters are stored in params, which is actually coming from "context". So access them, I had to use params. My slug page’s name was set to [slug].js, the parameters will be { slug: … }. Here is an example:
+- params - the slug pages utilizes a dynamic route, so the route parameters are stored in params, which is actually coming from "context". So access them, I had to use params. My slug page’s name was set to [slug].js, so the the parameters are set to { slug: … }. Here is an example:
 
 ```bash
 export async function getServerSideProps(context) {
