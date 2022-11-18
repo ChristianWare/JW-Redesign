@@ -36,7 +36,7 @@ const Layout = ({ children, title }) => {
       <Head>
         <title>{title ? title + " - Johnnie Walker" : "Johnnie Walker"}</title>
         <meta name='description' content='Ecommerce Website' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/icons/jw.png' />
       </Head>
       <div className={styles.container}>
         <ToastContainer position='bottom-center' limit={10} />
@@ -93,7 +93,10 @@ const Layout = ({ children, title }) => {
                           href='/order-history'
                         />
                         {session.user.isAdmin && (
-                          <DropdownItem text='Admin Dashboard' href='/admin/dashboard' />
+                          <DropdownItem
+                            text='Admin Dashboard'
+                            href='/admin/dashboard'
+                          />
                         )}
                         {/* <DropdownItem text='Profile' href='/profile' /> */}
                         <DropdownItem
