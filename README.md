@@ -93,7 +93,7 @@ export async function getServerSideProps(context) {
 
 ## Advantages of getServerSideProps( )
 
-Using GetServerSideProps anyone to improve their SEO, since the data is rendered before it reaches the client.
+Using GetServerSideProps helps anyone to improve their SEO, since the data is rendered before it reaches the client.
 
 The data is refreshed every time the user loads the page, allowing them to view the updated information at all times.
 
