@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 import Nav2 from "../nav2/Nav2";
 import { useRouter } from "next/router";
 import Button from "../button/Button";
+import Footer from '../footer/Footer'
 
 const Layout = ({ children, title }) => {
   const { status, data: session } = useSession();
@@ -120,6 +121,7 @@ const Layout = ({ children, title }) => {
         </header>
         {router.pathname !== "/" && <Nav2 />}
         <div>{children}</div>
+        <Footer />
       </div>
     </>
   );

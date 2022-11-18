@@ -9,6 +9,8 @@ import PageIntro from "../../components/pageIntro/PageIntro";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+import Catalog from "../../components/catalog/Catalog";
+
 export default function Products({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
@@ -26,6 +28,9 @@ export default function Products({ products }) {
   };
   return (
     <Layout title='Products'>
+    <div className={styles.labelContainer}>
+      <Catalog />
+    </div>
       <PageIntro
         title='All of Johnnies Whiskies'
         btnText='Home'

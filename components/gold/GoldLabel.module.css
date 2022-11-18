@@ -59,23 +59,6 @@
     word-spacing: .5rem;
 }
 
-.divider {
-    width: 30%;
-    height: .1rem;
-    color: var(--color8);
-    background-color: var(--color8);
-    border: none;
-    margin-top: .8rem;
-    margin-bottom: .3rem;
-}
-
-.lowerTop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .smallText {
     font-size: 1.1rem;
     font-weight: 600;
@@ -85,6 +68,7 @@
 .scriptText {
     font-family: 'birds';
     font-size: 3rem;
+    text-align: center;
 }
 
 .imgContainer {
@@ -118,14 +102,9 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    .right {
-        padding: 1rem
-    }
-}
 
 @media screen and (max-width: 480px) {
-    .jwblText h2  {
-        text-align: center;
+    .jwblText h2 {
+        font-size: 6rem;
     }
 }
