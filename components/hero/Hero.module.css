@@ -21,21 +21,6 @@
     position: relative;
 }
 
-/* .title span {
-    color: var(--orange);
-}
-
-.title span:after {
-    position: absolute;
-    content: 'GREATNESS';
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--dark);
-    top: 78px;
-    left: 10px;
-    z-index: -10;
-} */
-
 .topRight {
     border: 1.5px solid var(--dark);
     display: flex;
@@ -48,7 +33,7 @@
 
 .btnContainer {
     display: flex;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .featured {
