@@ -28,7 +28,7 @@ const ProductItem = ({ product, addToCartHandler, imgContainer = "small" }) => {
             height='300'
           />
         </div>
-        <p>Label: {product.label.toUpperCase()}</p>
+        <p>{product.label.toUpperCase()}</p>
         <p>${product.price.toLocaleString()}</p>
         <div className={styles.btnContainer}>
           <Button text='More Details' href={`/products/${product.slug}`} />

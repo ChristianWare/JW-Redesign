@@ -48,6 +48,7 @@
     text-align: center;
     position: relative;
     z-index: 999;
+ 
 }
 
 .rl:after {
@@ -56,10 +57,10 @@
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--dark);
-    white-space: nowrap;
     top: 10px;
     left: 12px;
     z-index: -1;
+    margin-right: -24px;
 }
 
 
@@ -80,7 +81,7 @@
     font-family: 'birds';
     font-size: 3rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     line-height: 100%;
 }
@@ -102,13 +103,6 @@
     .right {
         padding: 2rem
     }
-}
-
-@media screen and (max-width: 689px) {
-    .rl:after {
-    white-space:normal;
-}
-
 }
 
 @media screen and (max-width: 868px) {

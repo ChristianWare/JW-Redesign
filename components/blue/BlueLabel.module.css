@@ -58,49 +58,16 @@
     word-spacing: .5rem;
 }
 
-.divider {
-    width: 30%;
-    height: .1rem;
-    color: var(--color8);
-    background-color: var(--color8);
-    border: none;
-    margin-top: .8rem;
-    margin-bottom: .3rem;
-}
-
-.lowerTop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.smallText {
-    font-size: 1.1rem;
-    font-weight: 600;
-    word-spacing: .3rem;
-}
-
 .scriptText {
     font-family: 'birds';
     font-size: 3rem;
+    text-align: center;
 }
 
 .imgContainer {
    position: relative;
     margin-top: 1rem; 
     margin-bottom: 1rem; 
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 1rem;
-}
-
-.btnContainer {
-    display: flex;
 }
 
 @media screen and (max-width: 968px) {
