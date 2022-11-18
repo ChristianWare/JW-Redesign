@@ -30,9 +30,9 @@ const BlackLabel = () => {
               <p className={styles.rl}>BLACK LABEL</p>
             </div>
             <div className={styles.lowerTop}>
-              <div className={styles.imgContainer}>
+              {/* <div className={styles.imgContainer}>
                 <Image src={JW} width='50' height='83' alt='image' />
-              </div>
+              </div> */}
               <p className={styles.scriptText}>Blended Scotch Whisky</p>
             </div>
           </div>

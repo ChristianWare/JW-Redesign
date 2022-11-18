@@ -1,0 +1,131 @@
+.container {
+    color: var(--dark);
+    border-color: var(--gold);
+    background-color: var(--gold);
+    padding: 1rem;
+    border: 5px solid var(--color1);
+}
+
+.hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+    border: 5px solid var(--orange);
+}
+
+.border {
+    width: 100%;
+    border: 7px double var(--dark);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+}
+
+.jwblText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jwblText h4 {
+    font-family: 'Cormorant Garamond',
+        serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    background-color: transparent;
+}
+
+.jwblText h2 {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 10rem;
+    letter-spacing: .1rem;
+    line-height: 120%;
+}
+
+.jwblText h3 {
+    font-family: 'Roboto Condensed',
+        sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+}
+
+.divider {
+    width: 30%;
+    height: .1rem;
+    color: var(--color8);
+    background-color: var(--color8);
+    border: none;
+    margin-top: .8rem;
+    margin-bottom: .3rem;
+}
+
+.lowerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallText {
+    font-size: 1.1rem;
+    font-weight: 600;
+    word-spacing: .3rem;
+}
+
+.scriptText {
+    font-family: 'birds';
+    font-size: 3rem;
+}
+
+.imgContainer {
+   position: relative;
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+}
+
+.icon {
+    color: red;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.btnContainer {
+    display: flex;
+}
+
+@media screen and (max-width: 968px) {
+    .border {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .right {
+        padding: 2rem
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right {
+        padding: 1rem
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jwblText h2  {
+        text-align: center;
+    }
+}

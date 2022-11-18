@@ -1,14 +1,14 @@
-import styles from "./RedLabel.module.css";
+import styles from "./GoldLabel.module.css";
 import Image from "next/image";
 import JW from "../../public/icons/jw.png";
 import { useRouter } from "next/router";
 
-const Redlabel = () => {
+const GoldLabel = () => {
   const router = useRouter();
 
   const onClick = () => {
     if (router.pathname === "/") {
-      router.push("/red");
+      router.push("/gold");
     }
     return;
   };
@@ -24,19 +24,21 @@ const Redlabel = () => {
     >
       <div className={styles.border}>
         <div className={styles.left}>
-          <div className={styles.textContainer}>
-            <p className={styles.jw}>JOHNNIE WALKER</p>
-            <p className={styles.rl}>RED LABEL</p>
+          <div className={styles.jwblText}>
+            <h4>JOHNNIE WALKER</h4>
+            <h2>Gold Label</h2>
           </div>
           <div className={styles.lowerTop}>
             {/* <div className={styles.imgContainer}>
               <Image src={JW} width='50' height='83' alt='image' />
             </div> */}
-            <p className={styles.scriptText}>John Walker & Sons</p>
+            <h3 className={styles.scriptText}>John Walker & Sons</h3>
           </div>
         </div>
+        <div className={styles.right}></div>
       </div>
     </div>
   );
 };
-export default Redlabel;
+
+export default GoldLabel;

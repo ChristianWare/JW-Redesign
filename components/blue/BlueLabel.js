@@ -28,9 +28,9 @@ const BlueLabel = () => {
             <h2>Blue Label</h2>
           </div>
           <div className={styles.lowerTop}>
-            <div className={styles.imgContainer}>
+            {/* <div className={styles.imgContainer}>
               <Image src={JW} width='50' height='83' alt='image' />
-            </div>
+            </div> */}
             <h3 className={styles.scriptText}>John Walker & Sons</h3>
           </div>
         </div>

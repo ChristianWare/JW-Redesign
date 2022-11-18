@@ -8,6 +8,7 @@ import db from "../utils/db";
 import Product from "../models/Product";
 import styles from "../styles/Blue.module.css";
 import ProductItem from "../components/productItem/ProductItem";
+import GoldLabel from "../components/gold/GoldLabel";
 
 const GoldPage = ({ gold }) => {
   const { state, dispatch } = useContext(Store);
@@ -27,6 +28,9 @@ const GoldPage = ({ gold }) => {
   };
   return (
     <Layout title='gold'>
+      <div className={styles.labelContainer}>
+        <GoldLabel />
+      </div>
       <PageIntro
         title='The Greatness of gold'
         text="A skillful fusion of rare aged whiskies inspired by the notes originally kept by Sir Alexander Walker. Crafted from only a small number of Scotland's most renowned distilleries. Exceptionally smooth, creamy and delicate. Available in limited edition bottle. Perfect for gifts."

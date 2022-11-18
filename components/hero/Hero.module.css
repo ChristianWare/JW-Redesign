@@ -8,10 +8,9 @@
     gap: 1rem;
 }
 
-
 .topLeft {
     border: 1.5px solid var(--dark);
-    padding: 5rem;
+    padding: 3rem;
     margin-top: 1rem;
 }
 
@@ -36,7 +35,6 @@
     left: 10px;
     z-index: -10;
 } */
-
 
 .topRight {
     border: 1.5px solid var(--dark);

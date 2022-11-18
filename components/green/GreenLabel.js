@@ -29,9 +29,9 @@ const onClick = () => {
             <h2>GREEN LABEL</h2>
             <hr className={styles.hr1} />
             <hr className={styles.hr2} />
-            <div className={styles.imgContainer}>
+            {/* <div className={styles.imgContainer}>
               <Image src={JW} width='50' height='83' alt='image' />
-            </div>
+            </div> */}
             <h3 className={styles.scriptText}>Blended Malt Scotch Whiskey</h3>
           </div>
         </div>
