@@ -62,7 +62,7 @@ Node was used to handle all of the /api routes, which already comes out of the b
 
 ## Deployment
 
-Deploying Next.js apps on Vercel is very simple. Once you create an account and log into your dashboard, select the "Add New" button in the upper right hand corner of the site and select "Project". From here, you can connect to whichever Git Repository you want, and import an existing repo. After this, select a project, input your environment variables, if any, and hit deploy. Done.
+This app is hosted on the Vercel platform. Deploying Next.js apps on Vercel is very simple. Once you create an account and log into your dashboard, select the "Add New" button in the upper right hand corner of the site and select "Project". From here, you can connect to whichever Git Repository you want, and import an existing repo. After this, select a project, input your environment variables, if any, and hit deploy. Done.
 
 In addition to its simplicity, you may want to consider using Vercel to host Next.js apps because not every host supports all Next.js SSR and incremental static regeneration. The majority of them support only true pre-generated sites and don’t offer a solution for server-side code, and thus don’t support some of the greatest Next.js features.
 
