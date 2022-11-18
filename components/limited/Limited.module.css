@@ -1,7 +1,7 @@
 .container {
     color: var(--color4);
     background-color: var(--orange);
-    padding: 1rem;
+    padding: .7rem;
     border: 5px solid var(--orange);
 }
 
@@ -44,6 +44,7 @@
     font-weight: 700;
     font-size: 8rem;
     letter-spacing: .1rem;
+    line-height: 130%;
     color: var(--light);
     text-align: center;
     position: relative;

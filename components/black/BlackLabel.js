@@ -1,6 +1,4 @@
 import styles from "./BlackLabel.module.css";
-import Image from "next/image";
-import JW from "../../public/icons/jw.png";
 import { useRouter } from "next/router";
 
 const BlackLabel = () => {

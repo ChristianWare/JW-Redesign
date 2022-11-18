@@ -1,7 +1,7 @@
 .container {
     color: var(--color4);
     background-color: var(--dark2);
-    padding: 1rem;
+    padding: .7rem;
     border: 5px solid var(--dark);
 }
 
@@ -43,6 +43,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-size: 8rem;
+    line-height: 130%;
     letter-spacing: .1rem;
     color: var(--light);
     text-shadow: 5px 4px #7a663a;
